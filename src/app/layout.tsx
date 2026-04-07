@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import SiteNav from "@/components/SiteNav";
+import { StockTicker } from "@/components/StockTicker";
 
 const outfit = Outfit({
   variable: "--font-display",
@@ -38,7 +39,10 @@ export default function RootLayout({
     >
       <body className="noise-overlay min-h-full flex flex-col bg-gen-dark text-warm-sand">
         <SiteNav />
-        <main className="flex-1 pt-16">{children}</main>
+        <div className="fixed top-16 left-0 right-0 z-40">
+          <StockTicker />
+        </div>
+        <main className="flex-1 pt-[104px]">{children}</main>
       </body>
     </html>
   );

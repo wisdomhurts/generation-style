@@ -3,7 +3,7 @@ export default function CollateralPage() {
     <div className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Page Header */}
-        <div className="mb-20">
+        <div className="mb-14">
           <p className="mono-label mb-4">COLLATERAL</p>
           <h1 className="font-display font-bold text-white text-display-lg mb-4">
             Marketing Materials
@@ -15,14 +15,14 @@ export default function CollateralPage() {
         </div>
 
         {/* ─── INVESTOR ONE-PAGER ─── */}
-        <section id="investor-one-pager" className="scroll-mt-24 mb-24">
+        <section id="investor-one-pager" className="scroll-mt-24 mb-16">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">01</span>
             <h2 className="font-display font-bold text-white text-display-sm">
               Investor One-Pager
             </h2>
           </div>
-          <p className="text-graphite mb-8 max-w-xl">
+          <p className="text-graphite mb-6 max-w-xl">
             Single-page fact sheet with dark header, key statistics, and company overview.
           </p>
 
@@ -95,17 +95,17 @@ export default function CollateralPage() {
           </div>
         </section>
 
-        <div className="section-divider mb-24" />
+        <div className="section-divider mb-12" />
 
         {/* ─── QUARTERLY UPDATE ─── */}
-        <section id="quarterly-update" className="scroll-mt-24 mb-24">
+        <section id="quarterly-update" className="scroll-mt-24 mb-16">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">02</span>
             <h2 className="font-display font-bold text-white text-display-sm">
               Quarterly Update
             </h2>
           </div>
-          <p className="text-graphite mb-8 max-w-xl">
+          <p className="text-graphite mb-6 max-w-xl">
             Shareholder letter template with progress metrics and milestones.
           </p>
 
@@ -144,21 +144,21 @@ export default function CollateralPage() {
           </div>
         </section>
 
-        <div className="section-divider mb-24" />
+        <div className="section-divider mb-12" />
 
         {/* ─── SOCIAL MEDIA ─── */}
-        <section id="social-media" className="scroll-mt-24 mb-24">
+        <section id="social-media" className="scroll-mt-24 mb-16">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">03</span>
             <h2 className="font-display font-bold text-white text-display-sm">
               Social Media
             </h2>
           </div>
-          <p className="text-graphite mb-8 max-w-xl">
+          <p className="text-graphite mb-6 max-w-xl">
             Templates for LinkedIn, Twitter/X, and Instagram posts.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* LinkedIn */}
             <div>
               <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">LINKEDIN — 1200x627</p>
@@ -208,17 +208,17 @@ export default function CollateralPage() {
           </div>
         </section>
 
-        <div className="section-divider mb-24" />
+        <div className="section-divider mb-12" />
 
         {/* ─── EMAIL & LETTERHEAD ─── */}
-        <section id="email-letterhead" className="scroll-mt-24 mb-24">
+        <section id="email-letterhead" className="scroll-mt-24 mb-16">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">04</span>
             <h2 className="font-display font-bold text-white text-display-sm">
               Email &amp; Letterhead
             </h2>
           </div>
-          <p className="text-graphite mb-8 max-w-xl">
+          <p className="text-graphite mb-6 max-w-xl">
             Branded email header and corporate letterhead templates.
           </p>
 
@@ -247,17 +247,17 @@ export default function CollateralPage() {
           </div>
         </section>
 
-        <div className="section-divider mb-24" />
+        <div className="section-divider mb-12" />
 
         {/* ─── CONFERENCE BANNERS ─── */}
-        <section id="conference-banners" className="scroll-mt-24 mb-24">
+        <section id="conference-banners" className="scroll-mt-24 mb-16">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">05</span>
             <h2 className="font-display font-bold text-white text-display-sm">
               Conference Banners
             </h2>
           </div>
-          <p className="text-graphite mb-8 max-w-xl">
+          <p className="text-graphite mb-6 max-w-xl">
             Trade show and conference display banner templates.
           </p>
 
@@ -291,17 +291,17 @@ export default function CollateralPage() {
           </div>
         </section>
 
-        <div className="section-divider mb-24" />
+        <div className="section-divider mb-12" />
 
         {/* ─── WEB COMPONENTS ─── */}
-        <section id="web-components" className="scroll-mt-24 mb-24">
+        <section id="web-components" className="scroll-mt-24 mb-16">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">06</span>
             <h2 className="font-display font-bold text-white text-display-sm">
               Web Components
             </h2>
           </div>
-          <p className="text-graphite mb-8 max-w-xl">
+          <p className="text-graphite mb-6 max-w-xl">
             Reusable website components — hero banners, CTAs, and feature cards.
           </p>
 
@@ -326,7 +326,7 @@ export default function CollateralPage() {
             </div>
 
             {/* Feature Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
                 { title: "Strategic Assets", desc: "Premier uranium properties in Canada's most prolific mineral districts.", color: "gen-green" },
                 { title: "Proven Team", desc: "Management with decades of combined exploration and capital markets experience.", color: "reactor-blue" },
