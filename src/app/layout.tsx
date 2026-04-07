@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Inter, Space_Mono } from "next/font/google";
+import { Outfit, Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import SiteNav from "@/components/SiteNav";
 
@@ -14,10 +14,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const spaceMono = Space_Mono({
+const manrope = Manrope({
   variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${inter.variable} ${spaceMono.variable} h-full antialiased`}
+      className={`${outfit.variable} ${inter.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="noise-overlay min-h-full flex flex-col bg-gen-dark text-warm-sand">
         <SiteNav />

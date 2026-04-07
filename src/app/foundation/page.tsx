@@ -191,9 +191,9 @@ export default function FoundationPage() {
             </div>
           </div>
 
-          {/* Space Mono */}
+          {/* Manrope */}
           <div className="mb-16">
-            <p className="mono-label mb-8">MONO LABELS — SPACE MONO</p>
+            <p className="mono-label mb-8">MONO LABELS — MANROPE</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-carbon rounded-xl p-8">
                 <p className="font-mono text-gen-green text-xs tracking-[0.25em] mb-3">OVERLINE LABEL</p>
