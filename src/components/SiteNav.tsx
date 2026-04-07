@@ -1,137 +1,131 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useRef, useCallback, useEffect } from "react";
 
-interface NavSection {
+interface NavItem {
   label: string;
-  items: { label: string; href: string }[];
+  href: string;
 }
 
-const navSections: NavSection[] = [
-  {
-    label: "Foundation",
-    items: [
-      { label: "Design Tokens", href: "/foundation#design-tokens" },
-      { label: "Extended Palette", href: "/foundation#extended-palette" },
-      { label: "Typography", href: "/foundation#typography" },
-    ],
-  },
-  {
-    label: "Presentation",
-    items: [
-      { label: "Hero Slide", href: "/presentation#hero-slide" },
-      { label: "Statement", href: "/presentation#statement" },
-      { label: "Section Divider", href: "/presentation#section-divider" },
-      { label: "Signature Components", href: "/presentation#signature-components" },
-      { label: "Split Image", href: "/presentation#split-image" },
-    ],
-  },
-  {
-    label: "Data & Templates",
-    items: [
-      { label: "Map Frame", href: "/data-templates#map-frame" },
-      { label: "Data Slide", href: "/data-templates#data-slide" },
-      { label: "Timeline", href: "/data-templates#timeline" },
-      { label: "Peer Comparison", href: "/data-templates#peer-comparison" },
-      { label: "Drill Results", href: "/data-templates#drill-results" },
-      { label: "Cross Section", href: "/data-templates#cross-section" },
-      { label: "Core Photo", href: "/data-templates#core-photo" },
-      { label: "Property Map", href: "/data-templates#property-map" },
-      { label: "Callout Library", href: "/data-templates#callout-library" },
-      { label: "Infographics", href: "/data-templates#infographics" },
-    ],
-  },
-  {
-    label: "Collateral",
-    items: [
-      { label: "Investor One-Pager", href: "/collateral#investor-one-pager" },
-      { label: "Quarterly Update", href: "/collateral#quarterly-update" },
-      { label: "Social Media", href: "/collateral#social-media" },
-      { label: "Email & Letterhead", href: "/collateral#email-letterhead" },
-      { label: "Conference Banners", href: "/collateral#conference-banners" },
-      { label: "Web Components", href: "/collateral#web-components" },
-    ],
-  },
-  {
-    label: "Icons",
-    items: [{ label: "Icon System", href: "/icons#icon-system" }],
-  },
+const navItems: NavItem[] = [
+  { label: "Foundation", href: "/foundation" },
+  { label: "Presentation", href: "/presentation" },
+  { label: "Data & Templates", href: "/data-templates" },
+  { label: "Collateral", href: "/collateral" },
+  { label: "Icons", href: "/icons" },
 ];
 
-function NavDropdown({ section }: { section: NavSection }) {
-  const [open, setOpen] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const handleEnter = useCallback(() => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setOpen(true);
-  }, []);
-
-  const handleLeave = useCallback(() => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 150);
-  }, []);
+export default function SiteNav() {
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div
-      className="relative"
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-black/70 backdrop-blur-2xl border-b border-white/5 shadow-2xl"
+          : "bg-black/40 backdrop-blur-xl border-b border-white/[0.03]"
+      }`}
     >
-      <button
-        className="text-sm text-white/80 hover:text-gen-green transition-colors px-3 py-2 font-medium tracking-wide"
-        onClick={() => setOpen((prev) => !prev)}
-      >
-        {section.label}
-      </button>
-      {open && (
-        <div className="absolute top-full left-0 mt-1 bg-gen-dark border border-white/10 rounded-lg shadow-2xl py-2 min-w-[220px] z-50">
-          {section.items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="block px-4 py-2 text-sm text-white/70 hover:text-gen-green hover:bg-white/5 transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
-export default function SiteNav() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gen-dark border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-        <Link
-          href="/"
-          className="text-gen-green font-bold tracking-[0.2em] text-sm"
-        >
-          GENERATION STYLE
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-1.5 group">
+          <span className="font-display font-bold text-sm tracking-[0.2em] text-white transition-colors duration-300 group-hover:text-white">
+            GENERATION
+          </span>
+          <span className="font-display font-bold text-sm tracking-[0.2em] text-gen-green transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(200,230,74,0.4)]">
+            STYLE
+          </span>
         </Link>
-        <div className="flex items-center gap-1">
-          {navSections.map((section) => (
-            <NavDropdown key={section.label} section={section} />
-          ))}
+
+        {/* Desktop nav items */}
+        <div className="hidden md:flex items-center gap-1">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative text-sm px-4 py-2 font-medium tracking-wide transition-all duration-300 link-underline ${
+                  isActive
+                    ? "text-gen-green"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
+                {isActive && (
+                  <span className="absolute left-1 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-gen-green shadow-[0_0_6px_rgba(200,230,74,0.5)]" />
+                )}
+                <span className={isActive ? "ml-1" : ""}>{item.label}</span>
+              </Link>
+            );
+          })}
+
+          {/* TSX-V Badge */}
           <a
             href="https://generationuranium.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-white/80 hover:text-gen-green transition-colors px-3 py-2 font-medium tracking-wide"
+            className="ml-3 px-3 py-1.5 rounded-full border border-gen-green/30 text-gen-green text-xs font-mono tracking-wider hover:border-gen-green/60 hover:shadow-[0_0_15px_rgba(200,230,74,0.15)] transition-all duration-300"
           >
-            TSX-V: GEN ↗
+            TSX-V: GEN
           </a>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden text-white/70 hover:text-gen-green transition-colors"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            {mobileOpen ? (
+              <path d="M6 6l12 12M6 18L18 6" />
+            ) : (
+              <path d="M4 8h16M4 16h16" />
+            )}
+          </svg>
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-black/90 backdrop-blur-2xl border-t border-white/5 px-6 py-4 space-y-1">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className={`block py-2.5 text-sm font-medium tracking-wide transition-colors ${
+                  isActive ? "text-gen-green" : "text-white/70 hover:text-white"
+                }`}
+              >
+                {isActive && (
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-gen-green mr-2" />
+                )}
+                {item.label}
+              </Link>
+            );
+          })}
+          <a
+            href="https://generationuranium.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block py-2.5 text-sm font-mono text-gen-green tracking-wider"
+          >
+            TSX-V: GEN
+          </a>
+        </div>
+      )}
     </nav>
   );
 }

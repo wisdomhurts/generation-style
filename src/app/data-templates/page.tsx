@@ -1,800 +1,346 @@
 export default function DataTemplatesPage() {
   return (
-    <div className="py-16 px-6">
+    <div className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Page Header */}
-        <div className="mb-16">
-          <p className="text-gen-green tracking-[0.2em] text-sm font-medium mb-3">
-            DATA & TEMPLATES
-          </p>
-          <h1 className="font-display italic text-5xl md:text-6xl text-gen-dark mb-4">
+        <div className="mb-20">
+          <p className="mono-label mb-4">DATA &amp; TEMPLATES</p>
+          <h1 className="font-display font-bold text-white text-display-lg mb-4">
             Data Visualization
           </h1>
-          <p className="text-slate text-lg max-w-2xl">
+          <p className="text-graphite text-lg max-w-2xl leading-relaxed">
             Ten template specimens for maps, charts, timelines, peer
-            comparisons, and technical data — optimized for investor
-            communications.
+            comparisons, and technical data — optimized for investor communications.
           </p>
         </div>
 
-        {/* Map Frame */}
-        <section id="map-frame" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Map Frame
-          </h2>
-          <p className="text-slate mb-6">
-            Property boundary overlay with callout markers and legend.
-          </p>
-          <div className="aspect-video bg-arctic-white border border-gen-dark/10 rounded-2xl overflow-hidden p-6 md:p-10 relative">
-            <div className="absolute top-6 left-6 md:top-10 md:left-10">
-              <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                PROPERTY MAP
-              </p>
-              <p className="font-display italic text-xl text-gen-dark">
-                Yath Uranium Project
-              </p>
-            </div>
-            {/* Simulated map area */}
-            <div className="absolute inset-16 md:inset-20 bg-tundra-green/10 rounded-xl border border-tundra-green/30 relative">
-              {/* Grid lines */}
-              <div className="absolute inset-0 opacity-20">
-                {[...Array(5)].map((_, i) => (
-                  <div
-                    key={`h-${i}`}
-                    className="absolute left-0 right-0 border-t border-tundra-green"
-                    style={{ top: `${(i + 1) * 16.66}%` }}
-                  />
-                ))}
-                {[...Array(7)].map((_, i) => (
-                  <div
-                    key={`v-${i}`}
-                    className="absolute top-0 bottom-0 border-l border-tundra-green"
-                    style={{ left: `${(i + 1) * 12.5}%` }}
-                  />
-                ))}
-              </div>
-              {/* Property boundary */}
-              <div className="absolute top-[15%] left-[20%] w-[55%] h-[60%] border-2 border-gen-green rounded-lg bg-gen-green/5">
-                <p className="absolute -top-5 left-2 text-[10px] text-gen-green font-semibold">
-                  YATH BOUNDARY
-                </p>
-              </div>
-              {/* Callout markers */}
-              <div className="absolute top-[25%] left-[35%] flex items-center gap-1">
-                <div className="w-3 h-3 bg-gen-green rounded-full border-2 border-white shadow-md" />
-                <span className="text-[9px] bg-white px-1.5 py-0.5 rounded shadow text-gen-dark font-semibold">
-                  Zone A — High Priority
-                </span>
-              </div>
-              <div className="absolute top-[50%] left-[45%] flex items-center gap-1">
-                <div className="w-3 h-3 bg-uranium-yellow rounded-full border-2 border-white shadow-md" />
-                <span className="text-[9px] bg-white px-1.5 py-0.5 rounded shadow text-gen-dark font-semibold">
-                  Zone B — Prospective
-                </span>
-              </div>
-              <div className="absolute top-[35%] right-[15%] flex items-center gap-1">
-                <div className="w-3 h-3 bg-reactor-blue rounded-full border-2 border-white shadow-md" />
-                <span className="text-[9px] bg-white px-1.5 py-0.5 rounded shadow text-gen-dark font-semibold">
-                  Historic Workings
-                </span>
-              </div>
-            </div>
-            {/* Legend */}
-            <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 bg-white rounded-lg p-3 shadow border border-gen-dark/5">
-              <p className="text-[10px] font-semibold text-gen-dark mb-2">
-                LEGEND
-              </p>
-              <div className="space-y-1.5">
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 bg-gen-green rounded-full" />
-                  <span className="text-[10px] text-slate">High Priority</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 bg-uranium-yellow rounded-full" />
-                  <span className="text-[10px] text-slate">Prospective</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 bg-reactor-blue rounded-full" />
-                  <span className="text-[10px] text-slate">
-                    Historic Workings
-                  </span>
-                </div>
-              </div>
-            </div>
-            {/* Scale bar */}
-            <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
-              <div className="flex items-center gap-1">
-                <div className="w-16 h-0.5 bg-gen-dark" />
-                <span className="text-[9px] text-slate">5 km</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Template cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        {/* Data Slide */}
-        <section id="data-slide" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Data Slide
-          </h2>
-          <p className="text-slate mb-6">
-            Bar chart with green accent showing uranium price trends.
-          </p>
-          <div className="aspect-video bg-white border border-gen-dark/10 rounded-2xl overflow-hidden p-6 md:p-10 flex flex-col">
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                  MARKET DATA
-                </p>
-                <p className="font-display italic text-xl text-gen-dark">
-                  U₃O₈ Spot Price Trend (USD/lb)
-                </p>
+          {/* ─── 01 MAP FRAME ─── */}
+          <section id="map-frame" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              {/* Preview area */}
+              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+                {/* Topo lines */}
+                <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 400 220" fill="none">
+                  <path d="M0,100 Q100,60 200,90 T400,80" stroke="#C8E64A" strokeWidth="1" fill="none"/>
+                  <path d="M0,130 Q100,90 200,120 T400,110" stroke="#C8E64A" strokeWidth="0.8" fill="none"/>
+                  <path d="M0,160 Q100,120 200,150 T400,140" stroke="#C8E64A" strokeWidth="0.6" fill="none"/>
+                  <path d="M0,70 Q100,30 200,60 T400,50" stroke="#C8E64A" strokeWidth="0.5" fill="none"/>
+                </svg>
+                {/* Callout dots */}
+                <div className="absolute top-[30%] left-[25%] w-3 h-3 bg-gen-green rounded-full shadow-[0_0_8px_rgba(200,230,74,0.5)]" />
+                <div className="absolute top-[55%] left-[50%] w-3 h-3 bg-uranium-yellow rounded-full shadow-[0_0_8px_rgba(234,179,8,0.4)]" />
+                <div className="absolute top-[40%] right-[25%] w-3 h-3 bg-reactor-blue rounded-full shadow-[0_0_8px_rgba(37,99,235,0.4)]" />
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">PROPERTY MAP</p>
               </div>
-              <p className="text-slate text-xs">Source: UxC, 2024</p>
-            </div>
-            <div className="flex-1 flex items-end gap-2 md:gap-4 px-4">
-              {[
-                { year: "2019", value: 25, price: "$25" },
-                { year: "2020", value: 30, price: "$30" },
-                { year: "2021", value: 42, price: "$42" },
-                { year: "2022", value: 50, price: "$50" },
-                { year: "2023", value: 73, price: "$73" },
-                { year: "2024", value: 107, price: "$107" },
-              ].map((item) => (
-                <div key={item.year} className="flex-1 flex flex-col items-center">
-                  <span className="text-xs font-semibold text-gen-dark mb-1">
-                    {item.price}
-                  </span>
-                  <div
-                    className="w-full bg-gen-green rounded-t-md transition-all"
-                    style={{ height: `${(item.value / 107) * 100}%`, minHeight: '20px' }}
-                  />
-                  <span className="text-[10px] text-slate mt-2">
-                    {item.year}
-                  </span>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">01</span>
+                  <h3 className="font-display font-bold text-white text-lg">Map Frame</h3>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Timeline */}
-        <section id="timeline" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Timeline
-          </h2>
-          <p className="text-slate mb-6">
-            Corporate milestones from 2021 to 2026.
-          </p>
-          <div className="bg-gen-dark rounded-2xl overflow-hidden p-6 md:p-10">
-            <div className="flex items-center justify-between mb-8">
-              <div>
-                <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                  CORPORATE MILESTONES
-                </p>
-                <p className="font-display italic text-xl text-white">
-                  Growth Trajectory
+                <p className="text-graphite text-sm leading-relaxed">
+                  Property boundary overlay with topo lines, callout markers, and legend panel.
                 </p>
               </div>
             </div>
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute top-4 left-0 right-0 h-0.5 bg-white/10" />
-              <div className="grid grid-cols-6 gap-2">
-                {[
-                  { year: "2021", event: "Company Incorporation", active: true },
-                  { year: "2022", event: "Yath Project Acquired", active: true },
-                  {
-                    year: "2023",
-                    event: "TSX-V Listing · Initial Exploration",
-                    active: true,
-                  },
-                  {
-                    year: "2024",
-                    event: "Phase 1 Drill Program · Lac Savane Acquisition",
-                    active: true,
-                  },
-                  {
-                    year: "2025",
-                    event: "Phase 2 Exploration · Resource Estimate",
-                    active: false,
-                  },
-                  {
-                    year: "2026",
-                    event: "Advanced Exploration · PEA Initiation",
-                    active: false,
-                  },
-                ].map((item) => (
-                  <div key={item.year} className="text-center">
+          </section>
+
+          {/* ─── 02 DATA SLIDE ─── */}
+          <section id="data-slide" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 flex items-end gap-3 overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">MARKET DATA</p>
+                {/* Bar chart */}
+                {[25, 30, 42, 50, 73, 107].map((v, i) => (
+                  <div key={i} className="flex-1 flex flex-col items-center justify-end h-[140px]">
                     <div
-                      className={`w-3 h-3 rounded-full mx-auto mb-4 border-2 ${
-                        item.active
-                          ? "bg-gen-green border-gen-green"
-                          : "bg-transparent border-white/30"
-                      }`}
+                      className="w-full bg-gen-green/80 rounded-t-sm hover:bg-gen-green transition-colors"
+                      style={{ height: `${(v / 107) * 100}%` }}
                     />
-                    <p
-                      className={`text-sm font-bold mb-1 ${
-                        item.active ? "text-gen-green" : "text-white/40"
-                      }`}
-                    >
-                      {item.year}
-                    </p>
-                    <p className="text-[10px] text-white/60 leading-tight">
-                      {item.event}
-                    </p>
+                    <span className="text-[9px] text-white/30 mt-2 font-mono">{2019 + i}</span>
                   </div>
                 ))}
               </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">02</span>
+                  <h3 className="font-display font-bold text-white text-lg">Data Slide</h3>
+                </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Bar chart with chartreuse accent showing uranium price trends over time.
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Peer Comparison */}
-        <section id="peer-comparison" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Peer Comparison
-          </h2>
-          <p className="text-slate mb-6">
-            Competitive positioning table with GEN highlighted.
-          </p>
-          <div className="bg-white border border-gen-dark/10 rounded-2xl overflow-hidden">
-            <div className="p-6 md:p-8 pb-0">
-              <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                PEER COMPARISON
-              </p>
-              <p className="font-display italic text-xl text-gen-dark">
-                Uranium Sector Positioning
-              </p>
+          {/* ─── 03 TIMELINE ─── */}
+          <section id="timeline" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 flex items-center overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">MILESTONES</p>
+                {/* Horizontal timeline */}
+                <div className="w-full relative mt-4">
+                  <div className="absolute top-1/2 left-[10%] right-[10%] h-px bg-white/10" />
+                  <div className="flex justify-between px-[10%]">
+                    {["2021", "2022", "2023", "2024", "2025"].map((y, i) => (
+                      <div key={y} className="flex flex-col items-center relative">
+                        <div className={`w-3 h-3 rounded-full border-2 ${i < 4 ? "bg-gen-green border-gen-green shadow-[0_0_6px_rgba(200,230,74,0.4)]" : "bg-transparent border-white/30"}`} />
+                        <span className={`text-[10px] mt-2 font-mono ${i < 4 ? "text-gen-green" : "text-white/30"}`}>{y}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">03</span>
+                  <h3 className="font-display font-bold text-white text-lg">Timeline</h3>
+                </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Horizontal milestone dots marking corporate milestones from incorporation to PEA.
+                </p>
+              </div>
             </div>
-            <div className="p-4 md:p-8">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b-2 border-gen-dark/10">
-                    <th className="text-left py-3 px-3 text-xs text-slate font-semibold uppercase tracking-wider">
-                      Company
-                    </th>
-                    <th className="text-right py-3 px-3 text-xs text-slate font-semibold uppercase tracking-wider">
-                      Market Cap
-                    </th>
-                    <th className="text-right py-3 px-3 text-xs text-slate font-semibold uppercase tracking-wider">
-                      Stage
-                    </th>
-                    <th className="text-right py-3 px-3 text-xs text-slate font-semibold uppercase tracking-wider">
-                      Jurisdiction
-                    </th>
-                    <th className="text-right py-3 px-3 text-xs text-slate font-semibold uppercase tracking-wider">
-                      Key Asset
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
+          </section>
+
+          {/* ─── 04 PEER COMPARISON ─── */}
+          <section id="peer-comparison" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">PEER COMPARISON</p>
+                {/* Mini table */}
+                <div className="mt-10 space-y-1.5 text-[10px] font-mono">
+                  <div className="flex justify-between text-white/30 border-b border-white/5 pb-1">
+                    <span>COMPANY</span><span>STAGE</span>
+                  </div>
+                  <div className="flex justify-between text-white/40"><span>Cameco Corp.</span><span>Producer</span></div>
+                  <div className="flex justify-between text-white/40"><span>NexGen Energy</span><span>Development</span></div>
+                  <div className="flex justify-between bg-gen-green/10 text-gen-green px-2 py-1 rounded -mx-2">
+                    <span className="font-bold">Generation Uranium</span><span>Exploration</span>
+                  </div>
+                  <div className="flex justify-between text-white/40"><span>Cosa Resources</span><span>Exploration</span></div>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">04</span>
+                  <h3 className="font-display font-bold text-white text-lg">Peer Comparison</h3>
+                </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Competitive positioning table with GEN highlighted among uranium sector peers.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── 05 DRILL RESULTS ─── */}
+          <section id="drill-results" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">DRILL INTERCEPTS</p>
+                <div className="mt-10 space-y-2">
                   {[
-                    {
-                      name: "Cameco Corp.",
-                      cap: "$28.5B",
-                      stage: "Producer",
-                      jurisdiction: "Saskatchewan",
-                      asset: "McArthur River",
-                      highlight: false,
-                    },
-                    {
-                      name: "NexGen Energy",
-                      cap: "$4.8B",
-                      stage: "Development",
-                      jurisdiction: "Saskatchewan",
-                      asset: "Rook I",
-                      highlight: false,
-                    },
-                    {
-                      name: "Denison Mines",
-                      cap: "$1.6B",
-                      stage: "Development",
-                      jurisdiction: "Saskatchewan",
-                      asset: "Wheeler River",
-                      highlight: false,
-                    },
-                    {
-                      name: "Generation Uranium",
-                      cap: "$8.2M",
-                      stage: "Exploration",
-                      jurisdiction: "Yukon / Quebec",
-                      asset: "Yath Project",
-                      highlight: true,
-                    },
-                    {
-                      name: "Cosa Resources",
-                      cap: "$12M",
-                      stage: "Exploration",
-                      jurisdiction: "Saskatchewan",
-                      asset: "Ursa",
-                      highlight: false,
-                    },
-                    {
-                      name: "Baselode Energy",
-                      cap: "$15M",
-                      stage: "Exploration",
-                      jurisdiction: "Saskatchewan",
-                      asset: "Shadow",
-                      highlight: false,
-                    },
-                  ].map((row) => (
-                    <tr
-                      key={row.name}
-                      className={`border-b border-gen-dark/5 ${
-                        row.highlight
-                          ? "bg-gen-green/10 font-semibold"
-                          : "hover:bg-arctic-white"
-                      }`}
-                    >
-                      <td className="py-3 px-3">
-                        <span
-                          className={
-                            row.highlight ? "text-gen-green" : "text-gen-dark"
-                          }
-                        >
-                          {row.name}
-                        </span>
-                      </td>
-                      <td className="text-right py-3 px-3 text-granite">
-                        {row.cap}
-                      </td>
-                      <td className="text-right py-3 px-3">
-                        <span
-                          className={`text-xs px-2 py-0.5 rounded-full ${
-                            row.stage === "Producer"
-                              ? "bg-gen-green/15 text-gen-green"
-                              : row.stage === "Development"
-                                ? "bg-reactor-blue/15 text-reactor-blue"
-                                : "bg-uranium-yellow/15 text-uranium-yellow"
-                          }`}
-                        >
-                          {row.stage}
-                        </span>
-                      </td>
-                      <td className="text-right py-3 px-3 text-slate">
-                        {row.jurisdiction}
-                      </td>
-                      <td className="text-right py-3 px-3 text-slate">
-                        {row.asset}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Drill Results */}
-        <section id="drill-results" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Drill Results Table
-          </h2>
-          <p className="text-slate mb-6">
-            Technical assay data formatted for investor presentation.
-          </p>
-          <div className="bg-white border border-gen-dark/10 rounded-2xl overflow-hidden p-6 md:p-8">
-            <div className="mb-6">
-              <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                EXPLORATION DATA
-              </p>
-              <p className="font-display italic text-xl text-gen-dark">
-                Selected Drill Intercepts — Yath Project
-              </p>
-            </div>
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b-2 border-gen-dark/10">
-                  <th className="text-left py-2 px-3 text-xs text-slate font-semibold">
-                    Hole ID
-                  </th>
-                  <th className="text-right py-2 px-3 text-xs text-slate font-semibold">
-                    From (m)
-                  </th>
-                  <th className="text-right py-2 px-3 text-xs text-slate font-semibold">
-                    To (m)
-                  </th>
-                  <th className="text-right py-2 px-3 text-xs text-slate font-semibold">
-                    Width (m)
-                  </th>
-                  <th className="text-right py-2 px-3 text-xs text-slate font-semibold">
-                    U₃O₈ (%)
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { id: "YTH-001", from: "42.0", to: "45.5", width: "3.5", grade: "0.12" },
-                  { id: "YTH-002", from: "78.0", to: "82.0", width: "4.0", grade: "0.08" },
-                  { id: "YTH-003", from: "115.5", to: "118.0", width: "2.5", grade: "0.21" },
-                  { id: "YTH-004", from: "56.0", to: "61.5", width: "5.5", grade: "0.15" },
-                  { id: "YTH-005", from: "92.0", to: "94.5", width: "2.5", grade: "0.09" },
-                ].map((row) => (
-                  <tr
-                    key={row.id}
-                    className="border-b border-gen-dark/5 hover:bg-arctic-white"
-                  >
-                    <td className="py-2.5 px-3 font-medium text-gen-dark">
-                      {row.id}
-                    </td>
-                    <td className="text-right py-2.5 px-3 text-granite">
-                      {row.from}
-                    </td>
-                    <td className="text-right py-2.5 px-3 text-granite">
-                      {row.to}
-                    </td>
-                    <td className="text-right py-2.5 px-3 text-granite">
-                      {row.width}
-                    </td>
-                    <td className="text-right py-2.5 px-3 font-semibold text-gen-green">
-                      {row.grade}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p className="text-[10px] text-slate mt-4">
-              * True widths are estimated to be 75-85% of drilled widths.
-              Results are preliminary and subject to verification.
-            </p>
-          </div>
-        </section>
-
-        {/* Cross Section */}
-        <section id="cross-section" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Cross Section
-          </h2>
-          <p className="text-slate mb-6">
-            Geological cross-section template with layered strata.
-          </p>
-          <div className="aspect-video bg-arctic-white border border-gen-dark/10 rounded-2xl overflow-hidden p-6 md:p-10 relative">
-            <div className="mb-4">
-              <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                GEOLOGICAL SECTION
-              </p>
-              <p className="font-display italic text-xl text-gen-dark">
-                A-A&rsquo; Cross Section — Zone A
-              </p>
-            </div>
-            <div className="relative h-[60%] mt-8">
-              {/* Strata layers */}
-              <div className="absolute inset-x-0 top-0 h-[20%] bg-tundra-green/20 rounded-t-lg border-b border-tundra-green/30">
-                <span className="absolute right-2 top-1 text-[9px] text-tundra-green">
-                  Overburden
-                </span>
-              </div>
-              <div className="absolute inset-x-0 top-[20%] h-[25%] bg-granite/15 border-b border-granite/20">
-                <span className="absolute right-2 top-1 text-[9px] text-granite">
-                  Sandstone
-                </span>
-              </div>
-              <div className="absolute inset-x-0 top-[45%] h-[20%] bg-reactor-blue/10 border-b border-reactor-blue/20">
-                <span className="absolute right-2 top-1 text-[9px] text-reactor-blue">
-                  Unconformity
-                </span>
-              </div>
-              <div className="absolute inset-x-0 top-[65%] h-[35%] bg-gen-dark/10 rounded-b-lg">
-                <span className="absolute right-2 top-1 text-[9px] text-gen-dark">
-                  Basement Gneiss
-                </span>
-              </div>
-              {/* Mineralization zone */}
-              <div className="absolute left-[30%] top-[38%] w-[25%] h-[18%] bg-gen-green/30 border-2 border-gen-green rounded-lg flex items-center justify-center">
-                <span className="text-[10px] font-bold text-gen-green">
-                  U₃O₈ Mineralization
-                </span>
-              </div>
-              {/* Drill holes */}
-              <div className="absolute left-[35%] top-0 w-0.5 h-full bg-gen-dark/30 rotate-[5deg]">
-                <span className="absolute -top-4 -left-3 text-[9px] font-semibold text-gen-dark">
-                  YTH-001
-                </span>
-              </div>
-              <div className="absolute left-[50%] top-0 w-0.5 h-[80%] bg-gen-dark/30 rotate-[-3deg]">
-                <span className="absolute -top-4 -left-3 text-[9px] font-semibold text-gen-dark">
-                  YTH-003
-                </span>
-              </div>
-            </div>
-            <div className="absolute bottom-4 left-6 flex items-center gap-4">
-              <div className="flex items-center gap-1">
-                <div className="w-4 h-2 bg-gen-green/30 border border-gen-green rounded-sm" />
-                <span className="text-[9px] text-slate">Mineralization</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <div className="w-4 h-0.5 bg-gen-dark/30" />
-                <span className="text-[9px] text-slate">Drill Trace</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Core Photo */}
-        <section id="core-photo" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Core Photo Template
-          </h2>
-          <p className="text-slate mb-6">
-            Annotated drill core photography layout.
-          </p>
-          <div className="bg-white border border-gen-dark/10 rounded-2xl overflow-hidden p-6 md:p-10">
-            <div className="mb-6">
-              <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                CORE PHOTOGRAPHY
-              </p>
-              <p className="font-display italic text-xl text-gen-dark">
-                YTH-003 · 115.5m – 118.0m
-              </p>
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                { depth: "115.5–116.0m", note: "Fine-grained sandstone, weak alteration" },
-                { depth: "116.0–117.0m", note: "Strong chlorite alteration, visible uraninite" },
-                { depth: "117.0–118.0m", note: "Transitional zone, decreasing mineralization" },
-              ].map((core) => (
-                <div key={core.depth} className="rounded-lg overflow-hidden">
-                  <div className="aspect-[3/2] bg-gradient-to-b from-granite/40 to-granite/20 flex items-center justify-center relative">
-                    {/* Simulated core texture */}
-                    <div className="absolute inset-2 rounded bg-gradient-to-b from-logo-grey/30 via-tundra-green/20 to-logo-grey/30">
-                      <div className="absolute top-[30%] left-0 right-0 h-[30%] bg-gen-green/20 border-y border-gen-green/30" />
-                    </div>
-                    <div className="relative z-10 w-10 h-10 border-2 border-white/60 rounded flex items-center justify-center">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <circle cx="8.5" cy="8.5" r="1.5" />
-                        <path d="M21 15l-5-5L5 21" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="p-3 bg-arctic-white">
-                    <p className="text-xs font-semibold text-gen-dark">
-                      {core.depth}
-                    </p>
-                    <p className="text-[10px] text-slate mt-1">{core.note}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Property Map */}
-        <section id="property-map" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Property Map
-          </h2>
-          <p className="text-slate mb-6">
-            Regional-scale property map showing claim boundaries and
-            infrastructure.
-          </p>
-          <div className="aspect-video bg-gen-dark rounded-2xl overflow-hidden p-6 md:p-10 relative">
-            <div className="mb-4">
-              <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                REGIONAL MAP
-              </p>
-              <p className="font-display italic text-xl text-white">
-                Generation Uranium — Property Overview
-              </p>
-            </div>
-            {/* Map simulation */}
-            <div className="absolute inset-16 md:inset-20 top-24">
-              {/* Canada outline placeholder */}
-              <div className="absolute inset-0 border border-white/10 rounded-xl">
-                {/* Properties marked */}
-                <div className="absolute top-[30%] left-[25%] group">
-                  <div className="w-4 h-4 bg-gen-green rounded-full border-2 border-gen-dark shadow-lg shadow-gen-green/20" />
-                  <span className="absolute left-6 top-0 text-[10px] text-white whitespace-nowrap font-medium">
-                    Yath — Yukon
-                  </span>
-                </div>
-                <div className="absolute top-[55%] left-[60%] group">
-                  <div className="w-4 h-4 bg-reactor-blue rounded-full border-2 border-gen-dark shadow-lg" />
-                  <span className="absolute left-6 top-0 text-[10px] text-white whitespace-nowrap font-medium">
-                    Lac Savane — Quebec
-                  </span>
-                </div>
-                <div className="absolute top-[40%] left-[45%] group">
-                  <div className="w-3 h-3 bg-uranium-yellow rounded-full border-2 border-gen-dark" />
-                  <span className="absolute left-5 top-0 text-[9px] text-white/60 whitespace-nowrap">
-                    Future Target
-                  </span>
-                </div>
-              </div>
-            </div>
-            {/* Legend */}
-            <div className="absolute bottom-6 right-6 md:bottom-10 md:right-10 bg-gen-dark/80 border border-white/10 rounded-lg p-3">
-              <div className="space-y-1.5">
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 bg-gen-green rounded-full" />
-                  <span className="text-[10px] text-white/70">Flagship</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 bg-reactor-blue rounded-full" />
-                  <span className="text-[10px] text-white/70">Acquired</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 bg-uranium-yellow rounded-full" />
-                  <span className="text-[10px] text-white/70">Target</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Callout Library */}
-        <section id="callout-library" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Callout Library
-          </h2>
-          <p className="text-slate mb-6">
-            Reusable callout boxes for key statistics and highlights.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              {
-                type: "Stat",
-                value: "$107/lb",
-                label: "U₃O₈ Spot Price",
-                color: "border-gen-green",
-                bg: "bg-gen-green/5",
-              },
-              {
-                type: "Alert",
-                value: "Phase 2",
-                label: "Drill Program Approved",
-                color: "border-reactor-blue",
-                bg: "bg-reactor-blue/5",
-              },
-              {
-                type: "Highlight",
-                value: "7,600 ha",
-                label: "Yath Project Total Area",
-                color: "border-uranium-yellow",
-                bg: "bg-uranium-yellow/5",
-              },
-              {
-                type: "Quote",
-                value: '"Tier-1 potential"',
-                label: "— Independent Geological Assessment",
-                color: "border-aurora-teal",
-                bg: "bg-aurora-teal/5",
-              },
-              {
-                type: "Metric",
-                value: "4 Projects",
-                label: "Active Exploration Portfolio",
-                color: "border-gen-green",
-                bg: "bg-gen-green/5",
-              },
-              {
-                type: "Status",
-                value: "On Track",
-                label: "2025 Exploration Program",
-                color: "border-tundra-green",
-                bg: "bg-tundra-green/5",
-              },
-            ].map((callout) => (
-              <div
-                key={callout.label}
-                className={`${callout.bg} border-l-4 ${callout.color} rounded-r-lg p-5`}
-              >
-                <p className="text-[10px] text-slate uppercase tracking-wider mb-1">
-                  {callout.type}
-                </p>
-                <p className="text-xl font-bold text-gen-dark">
-                  {callout.value}
-                </p>
-                <p className="text-sm text-slate mt-1">{callout.label}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Infographics */}
-        <section id="infographics" className="scroll-mt-20 mb-20">
-          <h2 className="font-display italic text-3xl text-gen-dark mb-2">
-            Infographics
-          </h2>
-          <p className="text-slate mb-6">
-            Visual data storytelling components for presentations and
-            one-pagers.
-          </p>
-          <div className="bg-gen-dark rounded-2xl overflow-hidden p-6 md:p-10">
-            <div className="mb-8">
-              <p className="text-gen-green tracking-[0.2em] text-xs font-medium">
-                WHY URANIUM
-              </p>
-              <p className="font-display italic text-xl text-white">
-                The Clean Energy Imperative
-              </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                {
-                  icon: "⚡",
-                  stat: "10%",
-                  label: "Global electricity from nuclear",
-                },
-                {
-                  icon: "🌍",
-                  stat: "440+",
-                  label: "Reactors operating worldwide",
-                },
-                {
-                  icon: "📈",
-                  stat: "60+",
-                  label: "Reactors under construction",
-                },
-                {
-                  icon: "🎯",
-                  stat: "2050",
-                  label: "Net-zero target driving demand",
-                },
-              ].map((item) => (
-                <div key={item.label} className="text-center">
-                  <div className="text-3xl mb-3">{item.icon}</div>
-                  <p className="text-3xl font-bold text-gen-green mb-1">
-                    {item.stat}
-                  </p>
-                  <p className="text-xs text-white/60 leading-tight">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-            {/* Supply/Demand visual */}
-            <div className="mt-10 grid grid-cols-2 gap-6">
-              <div className="bg-white/5 rounded-xl p-5">
-                <p className="text-xs text-gen-green font-semibold mb-3">
-                  SUPPLY DEFICIT
-                </p>
-                <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between text-xs text-white/60 mb-1">
-                      <span>Mine Production</span>
-                      <span>130M lbs</span>
-                    </div>
-                    <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full w-[65%] bg-reactor-blue rounded-full" />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between text-xs text-white/60 mb-1">
-                      <span>Reactor Demand</span>
-                      <span>180M lbs</span>
-                    </div>
-                    <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full w-[90%] bg-gen-green rounded-full" />
-                    </div>
-                  </div>
-                </div>
-                <p className="text-[10px] text-uranium-yellow mt-3">
-                  ▲ 50M lb annual deficit
-                </p>
-              </div>
-              <div className="bg-white/5 rounded-xl p-5">
-                <p className="text-xs text-gen-green font-semibold mb-3">
-                  PRICE TRAJECTORY
-                </p>
-                <div className="flex items-end gap-1 h-20">
-                  {[25, 30, 42, 50, 73, 107].map((v, i) => (
-                    <div key={i} className="flex-1 flex flex-col items-center justify-end h-full">
-                      <div
-                        className="w-full bg-gen-green/70 rounded-t"
-                        style={{ height: `${(v / 107) * 100}%` }}
-                      />
+                    { id: "YTH-001", w: "3.5m", g: "0.12%" },
+                    { id: "YTH-003", w: "2.5m", g: "0.21%" },
+                    { id: "YTH-004", w: "5.5m", g: "0.15%" },
+                  ].map((r) => (
+                    <div key={r.id} className="glass-dark rounded-lg px-4 py-2.5 flex items-center justify-between">
+                      <span className="font-mono text-white/60 text-[11px]">{r.id}</span>
+                      <span className="font-mono text-white/40 text-[10px]">{r.w}</span>
+                      <span className="stat-number text-sm">{r.g}</span>
                     </div>
                   ))}
                 </div>
-                <div className="flex justify-between mt-2">
-                  <span className="text-[9px] text-white/40">2019</span>
-                  <span className="text-[9px] text-white/40">2024</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">05</span>
+                  <h3 className="font-display font-bold text-white text-lg">Drill Results</h3>
                 </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Technical assay intercept cards formatted for investor presentation clarity.
+                </p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+
+          {/* ─── 06 CROSS SECTION ─── */}
+          <section id="cross-section" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">CROSS SECTION</p>
+                {/* Layered strata */}
+                <svg className="absolute bottom-0 left-0 w-full h-[140px]" viewBox="0 0 400 140" fill="none" preserveAspectRatio="none">
+                  <path d="M0,30 Q100,10 200,25 T400,20 L400,50 Q300,40 200,55 T0,60 Z" fill="#3D6B4F" opacity="0.3"/>
+                  <path d="M0,60 Q100,40 200,55 T400,50 L400,80 Q300,70 200,85 T0,90 Z" fill="#4A5568" opacity="0.4"/>
+                  <path d="M0,90 Q100,70 200,85 T400,80 L400,110 Q300,100 200,115 T0,120 Z" fill="#2D3A3A" opacity="0.6"/>
+                  <path d="M0,120 Q100,100 200,115 T400,110 L400,140 L0,140 Z" fill="#1E2A2A" opacity="0.8"/>
+                  {/* Mineralization zone */}
+                  <rect x="150" y="55" width="80" height="20" rx="4" fill="#C8E64A" fillOpacity="0.2" stroke="#C8E64A" strokeWidth="1" strokeOpacity="0.4"/>
+                </svg>
+              </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">06</span>
+                  <h3 className="font-display font-bold text-white text-lg">Cross-Section</h3>
+                </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Geological cross-section with layered strata and mineralization zone highlights.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── 07 CORE PHOTO ─── */}
+          <section id="core-photo" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 flex items-center justify-center overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">CORE PHOTO</p>
+                <div className="w-[200px] h-[120px] border border-white/10 rounded-lg flex items-center justify-center bg-carbon">
+                  <div className="text-center">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A5568" strokeWidth="1.5" className="mx-auto mb-2">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <path d="M21 15l-5-5L5 21" />
+                    </svg>
+                    <p className="font-mono text-[9px] text-white/30 tracking-wider">CORE SAMPLE</p>
+                  </div>
+                </div>
+                <div className="absolute bottom-6 left-6 right-6 flex justify-between font-mono text-[9px] text-white/20">
+                  <span>HOLE: YTH-003</span>
+                  <span>DEPTH: 115.5m</span>
+                  <span>U3O8: 0.21%</span>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">07</span>
+                  <h3 className="font-display font-bold text-white text-lg">Core Photo</h3>
+                </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Photo frame template with overlaid hole ID, depth, and assay metadata.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── 08 PROPERTY MAP ─── */}
+          <section id="property-map" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">PROPERTY MAP</p>
+                {/* Claim block shapes */}
+                <div className="absolute inset-10 mt-8">
+                  <div className="absolute top-[10%] left-[10%] w-[40%] h-[35%] border border-gen-green/40 bg-gen-green/5 rounded" />
+                  <div className="absolute top-[15%] left-[45%] w-[35%] h-[30%] border border-gen-green/25 bg-gen-green/3 rounded" />
+                  <div className="absolute top-[50%] left-[15%] w-[55%] h-[35%] border border-gen-green/30 bg-gen-green/4 rounded" />
+                  <div className="absolute top-[20%] left-[25%] w-2 h-2 bg-gen-green rounded-full shadow-[0_0_6px_rgba(200,230,74,0.5)]" />
+                  <div className="absolute top-[60%] left-[40%] w-2 h-2 bg-uranium-yellow rounded-full shadow-[0_0_6px_rgba(234,179,8,0.4)]" />
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">08</span>
+                  <h3 className="font-display font-bold text-white text-lg">Property Map</h3>
+                </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Claim block shapes with boundary overlays, pins, and area calculations.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── 09 CALLOUT LIBRARY ─── */}
+          <section id="callout-library" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">CALLOUT LIBRARY</p>
+                <div className="mt-10 space-y-3">
+                  {/* Callout specimens */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-gen-green rounded-full shadow-[0_0_6px_rgba(200,230,74,0.4)]" />
+                    <div className="glass-dark rounded px-3 py-1.5">
+                      <span className="font-mono text-[10px] text-gen-green">Zone A — High Priority</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-uranium-yellow rounded-full" />
+                    <div className="glass-dark rounded px-3 py-1.5">
+                      <span className="font-mono text-[10px] text-uranium-yellow">Zone B — Prospective</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-reactor-blue rounded-full" />
+                    <div className="glass-dark rounded px-3 py-1.5">
+                      <span className="font-mono text-[10px] text-reactor-blue">Historic Workings</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">09</span>
+                  <h3 className="font-display font-bold text-white text-lg">Callout Library</h3>
+                </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Map callout specimens with color-coded pins and glass-dark label tooltips.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* ─── 10 INFOGRAPHICS ─── */}
+          <section id="infographics" className="scroll-mt-24">
+            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+                <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">INFOGRAPHICS</p>
+                <div className="mt-12 space-y-4">
+                  {/* Progress bars */}
+                  {[
+                    { label: "Exploration", pct: 85 },
+                    { label: "Permitting", pct: 45 },
+                    { label: "Development", pct: 15 },
+                  ].map((b) => (
+                    <div key={b.label}>
+                      <div className="flex justify-between mb-1">
+                        <span className="font-mono text-[9px] text-white/40 tracking-wider">{b.label}</span>
+                        <span className="font-mono text-[9px] text-gen-green">{b.pct}%</span>
+                      </div>
+                      <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                        <div className="h-full bg-gen-green rounded-full" style={{ width: `${b.pct}%` }} />
+                      </div>
+                    </div>
+                  ))}
+                  {/* Mini donut */}
+                  <div className="flex items-center gap-4 mt-2">
+                    <svg width="48" height="48" viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" r="18" fill="none" stroke="#2D3A3A" strokeWidth="4" />
+                      <circle cx="24" cy="24" r="18" fill="none" stroke="#C8E64A" strokeWidth="4"
+                        strokeDasharray="113.1" strokeDashoffset="28.3" strokeLinecap="round"
+                        transform="rotate(-90 24 24)" />
+                    </svg>
+                    <div>
+                      <p className="stat-number text-lg">75%</p>
+                      <p className="font-mono text-[9px] text-white/30 tracking-wider">PHASE COMPLETE</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-baseline gap-3 mb-2">
+                  <span className="font-mono text-gen-green text-sm">10</span>
+                  <h3 className="font-display font-bold text-white text-lg">Infographics</h3>
+                </div>
+                <p className="text-graphite text-sm leading-relaxed">
+                  Progress bars, donut charts, and percentage indicators for project milestones.
+                </p>
+              </div>
+            </div>
+          </section>
+
+        </div>
       </div>
     </div>
   );

@@ -1,179 +1,177 @@
 import Link from "next/link";
 
+const stats = [
+  { value: "25,000+", label: "Hectares" },
+  { value: "$80/lb", label: "U\u2083O\u2088" },
+  { value: "Thelon", label: "Basin" },
+  { value: "TSX-V:", label: "GEN" },
+];
+
 const sections = [
   {
+    num: "01",
     title: "Foundation",
-    desc: "Design tokens, color palette, and typography system",
+    desc: "Colors, typography, spacing, and the design tokens that define every visual decision.",
     href: "/foundation",
-    preview: (
-      <div className="flex gap-2 mt-3">
-        <div className="w-8 h-8 rounded bg-gen-dark" />
-        <div className="w-8 h-8 rounded bg-gen-green" />
-        <div className="w-8 h-8 rounded bg-logo-grey" />
-        <div className="w-8 h-8 rounded bg-reactor-blue" />
-        <div className="w-8 h-8 rounded bg-uranium-yellow" />
-      </div>
-    ),
   },
   {
+    num: "02",
     title: "Presentation",
-    desc: "Investor deck slides and visual components",
+    desc: "Hero slides, statements, section dividers, and signature deck components at 16:9.",
     href: "/presentation",
-    preview: (
-      <div className="mt-3 aspect-video bg-gen-dark rounded-lg flex items-center justify-center p-3">
-        <div className="text-center">
-          <div className="text-[8px] text-gen-green tracking-widest">
-            TSX-V: GEN
-          </div>
-          <div className="text-[10px] text-white font-display italic mt-1">
-            Generating the Power of Tomorrow
-          </div>
-        </div>
-      </div>
-    ),
   },
   {
+    num: "03",
     title: "Data & Templates",
-    desc: "Maps, charts, timelines, and data visualization",
+    desc: "Maps, charts, timelines, peer comparisons, drill results, and cross-sections.",
     href: "/data-templates",
-    preview: (
-      <div className="mt-3 flex gap-1">
-        {[65, 40, 80, 55, 70].map((h, i) => (
-          <div
-            key={i}
-            className="flex-1 rounded-sm bg-gen-green/80"
-            style={{ height: `${h * 0.4}px` }}
-          />
-        ))}
-      </div>
-    ),
   },
   {
+    num: "04",
     title: "Collateral",
-    desc: "One-pagers, updates, social media, letterheads",
+    desc: "One-pagers, social templates, email headers, conference banners, and web components.",
     href: "/collateral",
-    preview: (
-      <div className="mt-3 bg-gen-dark rounded-lg p-3">
-        <div className="h-1.5 w-12 bg-gen-green rounded mb-1.5" />
-        <div className="h-1 w-full bg-white/20 rounded mb-1" />
-        <div className="h-1 w-3/4 bg-white/20 rounded mb-1" />
-        <div className="h-1 w-5/6 bg-white/20 rounded" />
-      </div>
-    ),
   },
   {
+    num: "05",
     title: "Icons",
-    desc: "30-icon SVG system across 5 categories",
+    desc: "30 purpose-built SVG icons across nuclear, exploration, data, corporate, and environment.",
     href: "/icons",
-    preview: (
-      <div className="mt-3 grid grid-cols-4 gap-2">
-        {[...Array(4)].map((_, i) => (
-          <div
-            key={i}
-            className="aspect-square rounded bg-arctic-white flex items-center justify-center"
-          >
-            <svg width="16" height="16" viewBox="0 0 36 36" fill="none">
-              <circle cx="18" cy="18" r="3" fill="#7CC842" />
-              <ellipse
-                cx="18"
-                cy="18"
-                rx="14"
-                ry="6"
-                stroke="#1A1A2E"
-                strokeWidth="1.5"
-                transform={`rotate(${i * 60} 18 18)`}
-              />
-            </svg>
-          </div>
-        ))}
-      </div>
-    ),
   },
   {
-    title: "TSX-V: GEN",
-    desc: "Visit Generation Uranium corporate website",
-    href: "https://generationuranium.com",
-    preview: (
-      <div className="mt-3 text-gen-green text-xl font-bold tracking-wider">
-        GEN ↗
-      </div>
-    ),
-    external: true,
+    num: "06",
+    title: "Map Callouts",
+    desc: "Property callout specimens, pin styles, and geographic annotation patterns.",
+    href: "/data-templates#callout-library",
   },
 ];
 
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gen-dark text-white py-32 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-gen-green tracking-[0.3em] text-sm font-medium mb-6">
-            GENERATION URANIUM · TSX-V: GEN
+      {/* ─── HERO ─── */}
+      <section className="relative min-h-screen flex flex-col justify-between bg-gen-dark overflow-hidden">
+        {/* Radial glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,230,74,0.06)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(200,230,74,0.04)_0%,_transparent_50%)]" />
+
+        {/* Content */}
+        <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-6 pt-24 pb-12">
+          {/* Overline */}
+          <p
+            className="font-mono text-gen-green text-xs tracking-[0.35em] mb-8 animate-fade-up"
+          >
+            GENERATION URANIUM
           </p>
-          <h1 className="font-display italic text-6xl md:text-7xl lg:text-8xl font-normal leading-tight mb-6">
-            Brand Style System
+
+          {/* Main headline */}
+          <h1
+            className="font-display font-bold text-white text-display-xl max-w-5xl mb-6 animate-fade-up delay-100"
+          >
+            Generating the Power of Tomorrow
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            The complete visual identity system for Generation Uranium. Design
-            tokens, presentation templates, data visualizations, marketing
-            collateral, and icon library — built for clean energy investor
-            communications.
+
+          {/* Subtitle */}
+          <p
+            className="text-graphite text-lg md:text-xl max-w-[600px] leading-relaxed mb-8 animate-fade-up delay-200"
+          >
+            The complete visual identity system for Generation Uranium. Design tokens,
+            presentation templates, and investor-grade collateral for the clean energy future.
           </p>
+
+          {/* Accent line */}
+          <div
+            className="h-[2px] bg-gen-green animate-line-grow delay-300 glow-green-line"
+          />
+        </div>
+
+        {/* Stats row */}
+        <div className="relative z-10 px-6 pb-12">
+          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`glass-dark rounded-xl px-6 py-5 text-center animate-fade-up`}
+                style={{ animationDelay: `${0.4 + i * 0.1}s` }}
+              >
+                <p className="stat-number text-2xl md:text-3xl mb-1">
+                  {stat.value}
+                </p>
+                <p className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Section Cards */}
-      <section className="py-20 px-6">
+      {/* ─── SECTION DIVIDER ─── */}
+      <div className="section-divider mx-6" />
+
+      {/* ─── SECTION CARDS GRID ─── */}
+      <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sections.map((s) =>
-              s.external ? (
-                <a
-                  key={s.title}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group border border-gen-dark/10 rounded-2xl p-6 hover:border-gen-green/40 hover:shadow-lg transition-all"
-                >
-                  <h3 className="font-display italic text-2xl text-gen-dark group-hover:text-gen-green transition-colors">
-                    {s.title}
-                  </h3>
-                  <p className="text-slate text-sm mt-1">{s.desc}</p>
-                  {s.preview}
-                </a>
-              ) : (
-                <Link
-                  key={s.title}
-                  href={s.href}
-                  className="group border border-gen-dark/10 rounded-2xl p-6 hover:border-gen-green/40 hover:shadow-lg transition-all"
-                >
-                  <h3 className="font-display italic text-2xl text-gen-dark group-hover:text-gen-green transition-colors">
-                    {s.title}
-                  </h3>
-                  <p className="text-slate text-sm mt-1">{s.desc}</p>
-                  {s.preview}
-                </Link>
-              )
-            )}
+          <div className="mb-16">
+            <p className="mono-label mb-4">BRAND SYSTEM</p>
+            <h2 className="font-display font-bold text-white text-display-md">
+              Six chapters of visual identity
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sections.map((s) => (
+              <Link
+                key={s.num}
+                href={s.href}
+                className="group bg-carbon rounded-2xl p-7 card-hover relative overflow-hidden"
+              >
+                {/* Number */}
+                <p className="font-mono text-gen-green text-sm mb-4 tracking-wider">
+                  {s.num}
+                </p>
+
+                {/* Title */}
+                <h3 className="font-display font-bold text-white text-xl mb-2 group-hover:text-gen-green transition-colors duration-300">
+                  {s.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-graphite text-sm leading-relaxed">
+                  {s.desc}
+                </p>
+
+                {/* Arrow */}
+                <div className="mt-6 flex items-center gap-2 text-gen-green/50 group-hover:text-gen-green transition-colors duration-300">
+                  <span className="font-mono text-xs tracking-wider">EXPLORE</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M3 8h10M9 4l4 4-4 4" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gen-dark text-white py-12 px-6">
-        <div className="max-w-5xl mx-auto flex items-center justify-between">
-          <div>
-            <p className="font-display italic text-xl">Generation Uranium</p>
-            <p className="text-white/40 text-sm mt-1">
-              Clean energy exploration
+      {/* ─── SECTION DIVIDER ─── */}
+      <div className="section-divider mx-6" />
+
+      {/* ─── FOOTER ─── */}
+      <footer className="bg-gen-dark border-t border-white/[0.05] py-12 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <p className="font-mono text-gen-green text-sm tracking-[0.15em]">
+              GENERATION URANIUM
+            </p>
+            <p className="text-slate text-xs tracking-wide">
+              TSX-V: GEN &nbsp;|&nbsp; OTCQB: GENRF &nbsp;|&nbsp; FRA: W85
             </p>
           </div>
-          <div className="text-right">
-            <p className="text-gen-green font-bold tracking-wider text-sm">
-              TSX-V: GEN
+          <div className="mt-6 pt-4 border-t border-white/[0.03]">
+            <p className="text-white/20 text-xs">
+              &copy; {new Date().getFullYear()} Generation Uranium Corp. Brand Style System.
             </p>
-            <p className="text-white/40 text-sm mt-1">Brand Style System</p>
           </div>
         </div>
       </footer>
