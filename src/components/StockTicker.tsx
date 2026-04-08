@@ -43,17 +43,17 @@ export function StockTicker() {
   }, []);
 
   return (
-    <div className="flex items-center gap-8 py-3 px-6 bg-[#1a2424] border-b border-white/[0.05]">
+    <div className="flex items-center gap-8 py-3 px-6 bg-[#F5F3ED] border-b border-[#E8E5DD]">
       {stocks.map((s) => (
         <div key={s.symbol} className="flex items-center gap-3">
-          <span className="font-[family-name:var(--font-mono)] text-xs font-semibold tracking-wider text-white/40 uppercase">{s.exchange}: {s.symbol}</span>
-          <span className="text-sm font-semibold text-white/80">{s.price}</span>
-          <span className={`text-xs font-medium ${s.isPositive ? "text-gen-green" : "text-red-400"}`}>
+          <span className="font-[family-name:var(--font-mono)] text-xs font-semibold tracking-wider text-[#4A5568] uppercase">{s.exchange}: {s.symbol}</span>
+          <span className="text-sm font-semibold text-[#2D3748]">{s.price}</span>
+          <span className={`text-xs font-medium ${s.isPositive ? "text-[#7CC842]" : "text-red-500"}`}>
             {s.change} ({s.changePercent})
           </span>
         </div>
       ))}
-      <span className="ml-auto text-[10px] text-white/20">Updated {lastUpdate}</span>
+      <span className="ml-auto text-[10px] text-[#6B7B8D]">Updated {lastUpdate}</span>
     </div>
   );
 }

@@ -97,30 +97,26 @@ export default function Home() {
   return (
     <>
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex flex-col justify-between bg-gen-dark overflow-hidden">
-        {/* Radial glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,230,74,0.06)_0%,_transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(200,230,74,0.04)_0%,_transparent_50%)]" />
-
+      <section className="relative min-h-screen flex flex-col justify-between bg-white overflow-hidden">
         {/* Content */}
         <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-6 pt-24 pb-12">
           {/* Overline */}
           <p
-            className="font-mono text-gen-green text-xs tracking-[0.35em] mb-8 animate-fade-up"
+            className="font-mono text-[#7CC842] text-xs tracking-[0.35em] uppercase mb-8 animate-fade-up"
           >
             GENERATION URANIUM
           </p>
 
           {/* Main headline */}
           <h1
-            className="font-display font-bold text-white text-display-xl max-w-5xl mb-6 animate-fade-up delay-100"
+            className="font-display font-bold text-[#2D3748] text-display-xl max-w-5xl mb-6 animate-fade-up delay-100"
           >
             Generating the Power of Tomorrow
           </h1>
 
           {/* Subtitle */}
           <p
-            className="text-graphite text-lg md:text-xl max-w-[600px] leading-relaxed mb-8 animate-fade-up delay-200"
+            className="text-[#6B7B8D] text-lg md:text-xl max-w-[600px] leading-relaxed mb-8 animate-fade-up delay-200"
           >
             The complete visual identity system for Generation Uranium. Design tokens,
             presentation templates, and investor-grade collateral for the clean energy future.
@@ -128,23 +124,39 @@ export default function Home() {
 
           {/* Accent line */}
           <div
-            className="h-[2px] bg-gen-green animate-line-grow delay-300 glow-green-line"
+            className="h-[2px] bg-[#7CC842] animate-line-grow delay-300"
           />
+
+          {/* Dual CTAs */}
+          <div className="flex gap-4 mt-8 animate-fade-up delay-400">
+            <Link
+              href="/presentation"
+              className="bg-[#7CC842] text-white font-display font-bold px-7 py-3 rounded-lg text-sm tracking-wide hover:bg-[#6AB835] transition-all duration-300"
+            >
+              View Presentation
+            </Link>
+            <Link
+              href="/foundation"
+              className="border border-[#E8E5DD] text-[#4A5568] font-display font-semibold px-7 py-3 rounded-lg text-sm tracking-wide hover:border-[#7CC842] hover:text-[#7CC842] transition-all duration-300"
+            >
+              Explore Foundation
+            </Link>
+          </div>
         </div>
 
         {/* Stats row */}
-        <div className="relative z-10 px-6 pb-12">
-          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="relative z-10 px-6 pb-12 bg-[#F5F3ED]">
+          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 py-8">
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`glass-dark rounded-xl px-6 py-5 text-center animate-fade-up`}
+                className={`bg-white rounded-xl border border-[#E8E5DD] px-6 py-5 text-center animate-fade-up`}
                 style={{ animationDelay: `${0.4 + i * 0.1}s` }}
               >
                 <p className="stat-number text-2xl md:text-3xl mb-1">
                   {stat.value}
                 </p>
-                <p className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                <p className="font-mono text-[10px] tracking-[0.2em] text-[#6B7B8D] uppercase">
                   {stat.label}
                 </p>
               </div>
@@ -157,11 +169,11 @@ export default function Home() {
       <div className="section-divider mx-6" />
 
       {/* ─── SECTION CARDS GRID ─── */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <p className="mono-label mb-4">BRAND SYSTEM</p>
-            <h2 className="font-display font-bold text-white text-display-md">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-md">
               Six chapters of visual identity
             </h2>
           </div>
@@ -173,28 +185,28 @@ export default function Home() {
                 <Link
                   key={s.num}
                   href={s.href}
-                  className="group bg-carbon rounded-2xl p-7 card-hover relative overflow-hidden"
+                  className="group bg-white rounded-2xl p-7 card-hover relative overflow-hidden"
                 >
                   {/* Icon + Number */}
                   <div className="flex items-center gap-3 mb-4">
                     <SectionIcon />
-                    <p className="font-mono text-gen-green text-sm tracking-wider">
+                    <p className="font-mono text-[#7CC842] text-sm tracking-wider">
                       {s.num}
                     </p>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-display font-bold text-white text-xl mb-2 group-hover:text-gen-green transition-colors duration-300">
+                  <h3 className="font-display font-bold text-[#2D3748] text-xl mb-2 group-hover:text-[#7CC842] transition-colors duration-300">
                     {s.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-graphite text-sm leading-relaxed">
+                  <p className="text-[#6B7B8D] text-sm leading-relaxed">
                     {s.desc}
                   </p>
 
                   {/* Arrow */}
-                  <div className="mt-6 flex items-center gap-2 text-gen-green/50 group-hover:text-gen-green transition-colors duration-300">
+                  <div className="mt-6 flex items-center gap-2 text-[#7CC842]/50 group-hover:text-[#7CC842] transition-colors duration-300">
                     <span className="font-mono text-xs tracking-wider">EXPLORE</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
                       <path d="M3 8h10M9 4l4 4-4 4" />
@@ -211,11 +223,11 @@ export default function Home() {
       <div className="section-divider mx-6" />
 
       {/* ─── WHY URANIUM ─── */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <p className="mono-label mb-4">INVESTMENT THESIS</p>
-            <h2 className="font-display font-bold text-white text-display-md">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-md">
               Why Uranium Now
             </h2>
           </div>
@@ -249,41 +261,62 @@ export default function Home() {
                 ),
               },
             ].map((card) => (
-              <div key={card.title} className="bg-carbon rounded-2xl p-7 card-hover group">
+              <div key={card.title} className="bg-white rounded-2xl p-7 card-hover group">
                 <div className="mb-5">{card.icon}</div>
-                <h3 className="font-display font-bold text-white text-lg mb-2 group-hover:text-gen-green transition-colors duration-300">
+                <h3 className="font-display font-bold text-[#2D3748] text-lg mb-2 group-hover:text-[#7CC842] transition-colors duration-300">
                   {card.title}
                 </h3>
-                <p className="text-graphite text-sm leading-relaxed">{card.desc}</p>
+                <p className="text-[#6B7B8D] text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─── SECTION DIVIDER ─── */}
-      <div className="section-divider mx-6" />
+      {/* ─── CTA BANNER ─── */}
+      <section className="py-16 px-6 bg-[#F5F3ED]">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="mono-label mb-4">GET STARTED</p>
+          <h2 className="font-display font-bold text-[#2D3748] text-display-md mb-6">
+            Ready to explore the brand system?
+          </h2>
+          <div className="flex justify-center gap-4">
+            <Link
+              href="/presentation"
+              className="bg-[#7CC842] text-white font-display font-bold px-7 py-3 rounded-lg text-sm tracking-wide hover:bg-[#6AB835] transition-all duration-300"
+            >
+              View Presentation
+            </Link>
+            <Link
+              href="/foundation"
+              className="border border-[#E8E5DD] text-[#4A5568] font-display font-semibold px-7 py-3 rounded-lg text-sm tracking-wide hover:border-[#7CC842] hover:text-[#7CC842] transition-all duration-300"
+            >
+              Foundation
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* ─── FOOTER ─── */}
-      <footer className="bg-gen-dark border-t border-white/[0.05] py-12 px-6">
+      <footer className="bg-[#F5F3ED] border-t border-[#E8E5DD] py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <p className="font-mono text-gen-green text-sm tracking-[0.15em]">
+            <p className="font-mono text-[#7CC842] text-sm tracking-[0.15em]">
               GENERATION URANIUM
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-white/40 hover:text-gen-green transition-colors duration-300"><FacebookIcon className="w-5 h-5" /></a>
-              <a href="#" className="text-white/40 hover:text-gen-green transition-colors duration-300"><InstagramIcon className="w-5 h-5" /></a>
-              <a href="#" className="text-white/40 hover:text-gen-green transition-colors duration-300"><XIcon className="w-5 h-5" /></a>
-              <a href="#" className="text-white/40 hover:text-gen-green transition-colors duration-300"><YouTubeIcon className="w-5 h-5" /></a>
-              <a href="#" className="text-white/40 hover:text-gen-green transition-colors duration-300"><TikTokIcon className="w-5 h-5" /></a>
+              <a href="#" className="text-[#6B7B8D] hover:text-[#7CC842] transition-colors duration-300"><FacebookIcon className="w-5 h-5" /></a>
+              <a href="#" className="text-[#6B7B8D] hover:text-[#7CC842] transition-colors duration-300"><InstagramIcon className="w-5 h-5" /></a>
+              <a href="#" className="text-[#6B7B8D] hover:text-[#7CC842] transition-colors duration-300"><XIcon className="w-5 h-5" /></a>
+              <a href="#" className="text-[#6B7B8D] hover:text-[#7CC842] transition-colors duration-300"><YouTubeIcon className="w-5 h-5" /></a>
+              <a href="#" className="text-[#6B7B8D] hover:text-[#7CC842] transition-colors duration-300"><TikTokIcon className="w-5 h-5" /></a>
             </div>
-            <p className="text-slate text-xs tracking-wide">
+            <p className="text-[#6B7B8D] text-xs tracking-wide">
               TSX-V: GEN &nbsp;|&nbsp; OTCQB: GENRF &nbsp;|&nbsp; FRA: W85
             </p>
           </div>
-          <div className="mt-6 pt-4 border-t border-white/[0.03]">
-            <p className="text-white/20 text-xs">
+          <div className="mt-6 pt-4 border-t border-[#E8E5DD]">
+            <p className="text-[#6B7B8D] text-xs">
               &copy; {new Date().getFullYear()} Generation Uranium Corp. Brand Style System.
             </p>
           </div>
