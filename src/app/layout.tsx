@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Inter, Manrope } from "next/font/google";
+import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
 import SiteNav from "@/components/SiteNav";
 import { StockTicker } from "@/components/StockTicker";
@@ -15,16 +15,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const manrope = Manrope({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
-
 export const metadata: Metadata = {
-  title: "Generation Style — Brand System",
+  title: "Generation Uranium — TSX-V: GEN",
   description:
-    "Brand style system for Generation Uranium (TSX-V: GEN). Design tokens, presentation templates, data layouts, collateral, and icon library for clean energy investor communications.",
+    "Pioneering uranium exploration in the Thelon Basin, Nunavut. Generation Uranium Inc. (TSX-V: GEN | OTCQB: GENRF | FRA: W85).",
 };
 
 export default function RootLayout({
@@ -35,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${inter.variable} ${manrope.variable} h-full antialiased`}
+      className={`${outfit.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-[#2D3748]">
         <SiteNav />
