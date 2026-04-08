@@ -53,7 +53,7 @@ export default function FoundationPage() {
         {/* Page Header */}
         <div className="mb-20">
           <p className="mono-label mb-4">FOUNDATION</p>
-          <h1 className="font-display font-bold text-white text-display-lg mb-4">
+          <h1 className="font-display font-bold text-[#2D3748] text-display-lg mb-4">
             Design Tokens
           </h1>
           <p className="text-graphite text-lg max-w-2xl leading-relaxed">
@@ -65,7 +65,7 @@ export default function FoundationPage() {
         {/* ─── CORE PALETTE ─── */}
         <section id="design-tokens" className="scroll-mt-24 mb-28">
           <div className="flex items-baseline gap-4 mb-10">
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Core Palette
             </h2>
             <span className="font-mono text-gen-green text-xs tracking-wider">5 TOKENS</span>
@@ -85,10 +85,10 @@ export default function FoundationPage() {
                     style={{ backgroundColor: token.hex }}
                   >
                     <div>
-                      <p className={`font-display font-bold text-xl ${isLight ? "text-gen-dark" : "text-white"}`}>
+                      <p className={`font-display font-bold text-xl ${isLight ? "text-gen-dark" : "text-[#2D3748]"}`}>
                         {token.name}
                       </p>
-                      <p className={`font-mono text-xs mt-1 ${isLight ? "text-gen-dark/60" : "text-white/60"}`}>
+                      <p className={`font-mono text-xs mt-1 ${isLight ? "text-gen-dark/60" : "text-[#6B7B8D]"}`}>
                         {token.hex}
                       </p>
                     </div>
@@ -117,7 +117,7 @@ export default function FoundationPage() {
         <section id="extended-palette" className="scroll-mt-24 mb-28">
           <div className="section-divider mb-16" />
           <div className="flex items-baseline gap-4 mb-10">
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Extended Palette
             </h2>
             <span className="font-mono text-gen-green text-xs tracking-wider">7 TOKENS</span>
@@ -133,10 +133,10 @@ export default function FoundationPage() {
                     style={{ backgroundColor: token.hex }}
                   >
                     <div>
-                      <p className={`font-display font-semibold text-sm ${isLight ? "text-gen-dark" : "text-white"}`}>
+                      <p className={`font-display font-semibold text-sm ${isLight ? "text-gen-dark" : "text-[#2D3748]"}`}>
                         {token.name}
                       </p>
-                      <p className={`font-mono text-[10px] mt-0.5 ${isLight ? "text-gen-dark/60" : "text-white/60"}`}>
+                      <p className={`font-mono text-[10px] mt-0.5 ${isLight ? "text-gen-dark/60" : "text-[#6B7B8D]"}`}>
                         {token.hex}
                       </p>
                     </div>
@@ -154,7 +154,7 @@ export default function FoundationPage() {
         <section id="typography" className="scroll-mt-24 mb-28">
           <div className="section-divider mb-16" />
           <div className="flex items-baseline gap-4 mb-12">
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Typography
             </h2>
             <span className="font-mono text-gen-green text-xs tracking-wider">3 FONTS</span>
@@ -166,25 +166,25 @@ export default function FoundationPage() {
             <div className="space-y-8 border-l-2 border-gen-green/30 pl-8">
               <div className="bg-[#F5F3ED] rounded-xl p-8">
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">72px / HERO</p>
-                <p className="font-display font-bold text-[72px] leading-[1.05] text-white tracking-tight">
+                <p className="font-display font-bold text-[72px] leading-[1.05] text-[#2D3748] tracking-tight">
                   Power
                 </p>
               </div>
-              <div className="bg-white rounded-xl p-8 border border-white/5">
+              <div className="bg-white rounded-xl p-8 border border-[#E8E5DD]">
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">48px / SECTION TITLE</p>
-                <p className="font-display font-bold text-[48px] leading-tight text-white">
+                <p className="font-display font-bold text-[48px] leading-tight text-[#2D3748]">
                   Generating Tomorrow
                 </p>
               </div>
               <div className="bg-[#F5F3ED] rounded-xl p-8">
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">32px / SUBSECTION</p>
-                <p className="font-display font-semibold text-[32px] leading-snug text-white">
+                <p className="font-display font-semibold text-[32px] leading-snug text-[#2D3748]">
                   Strategic Uranium Exploration in the Thelon Basin
                 </p>
               </div>
-              <div className="bg-white rounded-xl p-8 border border-white/5">
+              <div className="bg-white rounded-xl p-8 border border-[#E8E5DD]">
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">24px / CARD TITLE</p>
-                <p className="font-display font-semibold text-[24px] leading-snug text-white">
+                <p className="font-display font-semibold text-[24px] leading-snug text-[#2D3748]">
                   Next-Generation Clean Energy Exploration
                 </p>
               </div>
@@ -200,7 +200,7 @@ export default function FoundationPage() {
                 <p className="font-mono text-gen-green text-lg tracking-wider">
                   TSX-V: GEN
                 </p>
-                <p className="font-mono text-white/40 text-xs mt-4 tracking-wider">
+                <p className="font-mono text-[#A0AEC0] text-xs mt-4 tracking-wider">
                   SECTION 01 &middot; FOUNDATION
                 </p>
               </div>
@@ -219,7 +219,7 @@ export default function FoundationPage() {
           {/* Inter Body */}
           <div className="mb-16">
             <p className="mono-label mb-8">BODY — INTER</p>
-            <div className="space-y-6 border-l-2 border-white/10 pl-8">
+            <div className="space-y-6 border-l-2 border-[#E8E5DD] pl-8">
               <div>
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-2">16px / BODY REGULAR</p>
                 <p className="text-[16px] leading-relaxed text-[#2D3748]">
@@ -274,7 +274,7 @@ export default function FoundationPage() {
               <button className="bg-gen-green text-gen-dark font-display font-bold px-7 py-3 rounded-lg text-sm tracking-wide hover:shadow-[0_0_20px_rgba(200,230,74,0.3)] hover:brightness-110 transition-all duration-300">
                 Primary Action
               </button>
-              <button className="bg-[#F5F3ED] text-white font-display font-semibold px-7 py-3 rounded-lg text-sm tracking-wide border border-white/10 hover:border-gen-green/30 transition-all duration-300">
+              <button className="bg-[#F5F3ED] text-[#2D3748] font-display font-semibold px-7 py-3 rounded-lg text-sm tracking-wide border border-[#E8E5DD] hover:border-gen-green/30 transition-all duration-300">
                 Secondary Action
               </button>
               <button className="border-2 border-gen-green text-gen-green font-display font-semibold px-7 py-3 rounded-lg text-sm tracking-wide hover:bg-gen-green/10 hover:shadow-[0_0_20px_rgba(200,230,74,0.15)] transition-all duration-300">

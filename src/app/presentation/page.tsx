@@ -5,7 +5,7 @@ export default function PresentationPage() {
         {/* Page Header */}
         <div className="mb-20">
           <p className="mono-label mb-4">PRESENTATION</p>
-          <h1 className="font-display font-bold text-white text-display-lg mb-4">
+          <h1 className="font-display font-bold text-[#2D3748] text-display-lg mb-4">
             Slide Templates
           </h1>
           <p className="text-graphite text-lg max-w-2xl leading-relaxed">
@@ -18,7 +18,7 @@ export default function PresentationPage() {
         <section id="hero-slide" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">01</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Hero Slide
             </h2>
           </div>
@@ -35,7 +35,7 @@ export default function PresentationPage() {
               <p className="font-mono text-gen-green tracking-[0.25em] text-xs">
                 GENERATION URANIUM
               </p>
-              <p className="text-white/30 font-mono text-xs">TSX-V: GEN</p>
+              <p className="text-[#A0AEC0] font-mono text-xs">TSX-V: GEN</p>
             </div>
 
             {/* Center content */}
@@ -43,18 +43,18 @@ export default function PresentationPage() {
               <p className="font-mono text-gen-green tracking-[0.3em] text-[10px] md:text-xs mb-4">
                 CLEAN ENERGY EXPLORATION
               </p>
-              <h3 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-white leading-tight mb-3">
+              <h3 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-[#2D3748] leading-tight mb-3">
                 Generating the Power
                 <br />
                 of Tomorrow
               </h3>
-              <p className="text-white/40 text-sm md:text-base max-w-lg">
+              <p className="text-[#A0AEC0] text-sm md:text-base max-w-lg">
                 Strategic uranium exploration across Canada&rsquo;s premier mineral districts
               </p>
             </div>
 
             {/* Stats strip */}
-            <div className="relative z-10 grid grid-cols-4 gap-4 border-t border-white/10 pt-4">
+            <div className="relative z-10 grid grid-cols-4 gap-4 border-t border-[#E8E5DD] pt-4">
               {[
                 { label: "Projects", value: "4" },
                 { label: "Hectares", value: "25,000+" },
@@ -65,7 +65,7 @@ export default function PresentationPage() {
                   <p className="stat-number text-lg md:text-2xl">
                     {stat.value}
                   </p>
-                  <p className="text-white/30 font-mono text-[9px] md:text-[10px] tracking-wider uppercase">
+                  <p className="text-[#A0AEC0] font-mono text-[9px] md:text-[10px] tracking-wider uppercase">
                     {stat.label}
                   </p>
                 </div>
@@ -80,7 +80,7 @@ export default function PresentationPage() {
         <section id="statement" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">02</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Statement Slide
             </h2>
           </div>
@@ -117,7 +117,7 @@ export default function PresentationPage() {
         <section id="section-divider" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">03</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Section Divider
             </h2>
           </div>
@@ -132,7 +132,7 @@ export default function PresentationPage() {
               <p className="font-mono text-gen-green tracking-[0.4em] text-[10px] md:text-xs mb-4">
                 SECTION 02
               </p>
-              <h3 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-white">
+              <h3 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-[#2D3748]">
                 Project Portfolio
               </h3>
               <div className="w-12 h-0.5 bg-gen-green mx-auto mt-6 glow-green-line" />
@@ -146,7 +146,7 @@ export default function PresentationPage() {
         <section id="signature-components" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">04</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Signature Components
             </h2>
           </div>
@@ -154,7 +154,7 @@ export default function PresentationPage() {
             Big Number, Data Card, and Status Badge — reusable in any slide context.
           </p>
 
-          <div className="aspect-video bg-[#F5F3ED] rounded-2xl overflow-hidden p-8 md:p-12 flex flex-col justify-between card-hover border border-white/5">
+          <div className="aspect-video bg-[#F5F3ED] rounded-2xl overflow-hidden p-8 md:p-12 flex flex-col justify-between card-hover border border-[#E8E5DD]">
             <p className="font-mono text-gen-green tracking-[0.25em] text-xs">
               COMPONENT SPECIMENS
             </p>
@@ -168,7 +168,7 @@ export default function PresentationPage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-white rounded-xl p-4 md:p-6 border border-white/5 hover:border-gen-green/20 transition-all duration-300"
+                  className="bg-white rounded-xl p-4 md:p-6 border border-[#E8E5DD] hover:border-gen-green/20 transition-all duration-300"
                 >
                   <div className="flex items-baseline gap-1">
                     <span className="stat-number text-3xl md:text-4xl">
@@ -188,15 +188,15 @@ export default function PresentationPage() {
               <div className="glass-dark rounded-lg px-5 py-3 flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-gen-green shadow-[0_0_6px_rgba(200,230,74,0.5)]" />
                 <div>
-                  <p className="text-xs text-white/40 font-mono">Active Exploration</p>
-                  <p className="text-sm font-display font-semibold text-white">Yath Project — Yukon</p>
+                  <p className="text-xs text-[#A0AEC0] font-mono">Active Exploration</p>
+                  <p className="text-sm font-display font-semibold text-[#2D3748]">Yath Project — Yukon</p>
                 </div>
               </div>
               <div className="glass-dark rounded-lg px-5 py-3 flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-uranium-yellow shadow-[0_0_6px_rgba(234,179,8,0.4)]" />
                 <div>
-                  <p className="text-xs text-white/40 font-mono">Permitting Phase</p>
-                  <p className="text-sm font-display font-semibold text-white">Lac Savane — Quebec</p>
+                  <p className="text-xs text-[#A0AEC0] font-mono">Permitting Phase</p>
+                  <p className="text-sm font-display font-semibold text-[#2D3748]">Lac Savane — Quebec</p>
                 </div>
               </div>
               <span className="bg-gen-green/15 text-gen-green text-xs font-mono px-3 py-1.5 rounded-full border border-gen-green/20">
@@ -218,7 +218,7 @@ export default function PresentationPage() {
         <section id="split-image" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">05</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Split Image Slide
             </h2>
           </div>
@@ -230,19 +230,19 @@ export default function PresentationPage() {
             {/* Left: Visual */}
             <div className="bg-gradient-to-br from-tundra-green/80 to-gen-dark flex items-center justify-center relative">
               <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-[20%] left-[15%] w-24 h-24 border border-white/20 rounded-full" />
+                <div className="absolute top-[20%] left-[15%] w-24 h-24 border border-[#E8E5DD] rounded-full" />
                 <div className="absolute top-[40%] left-[40%] w-16 h-16 border border-white/15 rounded-full" />
-                <div className="absolute bottom-[25%] right-[20%] w-32 h-32 border border-white/10 rounded-full" />
+                <div className="absolute bottom-[25%] right-[20%] w-32 h-32 border border-[#E8E5DD] rounded-full" />
               </div>
               <div className="text-center relative z-10">
-                <div className="w-16 h-16 mx-auto border border-white/20 rounded-lg flex items-center justify-center mb-3">
+                <div className="w-16 h-16 mx-auto border border-[#E8E5DD] rounded-lg flex items-center justify-center mb-3">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeOpacity="0.6">
                     <rect x="3" y="3" width="18" height="18" rx="2" />
                     <circle cx="8.5" cy="8.5" r="1.5" />
                     <path d="M21 15l-5-5L5 21" />
                   </svg>
                 </div>
-                <p className="text-white/40 font-mono text-xs tracking-wider">FIELD PHOTOGRAPHY</p>
+                <p className="text-[#A0AEC0] font-mono text-xs tracking-wider">FIELD PHOTOGRAPHY</p>
               </div>
             </div>
             {/* Right: Content */}
@@ -250,7 +250,7 @@ export default function PresentationPage() {
               <p className="font-mono text-gen-green tracking-[0.25em] text-[10px] md:text-xs mb-4">
                 YATH URANIUM PROJECT
               </p>
-              <h3 className="font-display font-bold text-2xl md:text-3xl text-white mb-4 leading-snug">
+              <h3 className="font-display font-bold text-2xl md:text-3xl text-[#2D3748] mb-4 leading-snug">
                 7,600 Hectares in
                 <br />
                 the Heart of Yukon

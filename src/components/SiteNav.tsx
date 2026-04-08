@@ -32,7 +32,7 @@ export default function SiteNav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-2xl border-b border-white/5 shadow-2xl"
+          ? "bg-white/95 backdrop-blur-2xl border-b border-[#E8E5DD] shadow-2xl"
           : "bg-black/40 backdrop-blur-xl border-b border-white/[0.03]"
       }`}
     >
@@ -97,7 +97,7 @@ export default function SiteNav() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-black/90 backdrop-blur-2xl border-t border-white/5 px-6 py-4 space-y-1">
+        <div className="md:hidden bg-black/90 backdrop-blur-2xl border-t border-[#E8E5DD] px-6 py-4 space-y-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (

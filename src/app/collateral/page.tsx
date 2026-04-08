@@ -5,7 +5,7 @@ export default function CollateralPage() {
         {/* Page Header */}
         <div className="mb-20">
           <p className="mono-label mb-4">COLLATERAL</p>
-          <h1 className="font-display font-bold text-white text-display-lg mb-4">
+          <h1 className="font-display font-bold text-[#2D3748] text-display-lg mb-4">
             Marketing Materials
           </h1>
           <p className="text-graphite text-lg max-w-2xl leading-relaxed">
@@ -18,7 +18,7 @@ export default function CollateralPage() {
         <section id="investor-one-pager" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">01</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Investor One-Pager
             </h2>
           </div>
@@ -28,18 +28,18 @@ export default function CollateralPage() {
 
           <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover max-w-2xl mx-auto">
             {/* Dark Header */}
-            <div className="bg-white p-6 md:p-8 border-b border-white/5">
+            <div className="bg-white p-6 md:p-8 border-b border-[#E8E5DD]">
               <div className="flex items-center justify-between mb-6">
                 <p className="font-mono text-gen-green tracking-[0.2em] text-xs">
                   GENERATION URANIUM
                 </p>
-                <p className="font-mono text-white/30 text-xs">TSX-V: GEN</p>
+                <p className="font-mono text-[#A0AEC0] text-xs">TSX-V: GEN</p>
               </div>
-              <h3 className="font-display font-bold text-2xl text-white mb-2">
+              <h3 className="font-display font-bold text-2xl text-[#2D3748] mb-2">
                 Corporate Fact Sheet
               </h3>
-              <p className="text-white/40 text-sm font-mono">Q4 2024 — Investor Overview</p>
-              <div className="grid grid-cols-4 gap-4 mt-6 pt-4 border-t border-white/10">
+              <p className="text-[#A0AEC0] text-sm font-mono">Q4 2024 — Investor Overview</p>
+              <div className="grid grid-cols-4 gap-4 mt-6 pt-4 border-t border-[#E8E5DD]">
                 {[
                   { value: "$8.2M", label: "Market Cap" },
                   { value: "25,000+", label: "Hectares" },
@@ -48,7 +48,7 @@ export default function CollateralPage() {
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <p className="stat-number text-lg">{stat.value}</p>
-                    <p className="text-white/30 font-mono text-[9px] tracking-wider uppercase">{stat.label}</p>
+                    <p className="text-[#A0AEC0] font-mono text-[9px] tracking-wider uppercase">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -71,9 +71,9 @@ export default function CollateralPage() {
                     { name: "Yath Project", loc: "Yukon Territory", size: "7,600 ha", status: "Active" },
                     { name: "Lac Savane", loc: "Quebec", size: "12,400 ha", status: "Permitting" },
                   ].map((p) => (
-                    <div key={p.name} className="flex items-center justify-between bg-white rounded-lg p-3 border border-white/5">
+                    <div key={p.name} className="flex items-center justify-between bg-white rounded-lg p-3 border border-[#E8E5DD]">
                       <div>
-                        <p className="text-sm font-display font-semibold text-white">{p.name}</p>
+                        <p className="text-sm font-display font-semibold text-[#2D3748]">{p.name}</p>
                         <p className="text-xs text-graphite font-mono">{p.loc} &middot; {p.size}</p>
                       </div>
                       <span className={`text-xs font-mono px-2.5 py-0.5 rounded-full ${
@@ -87,7 +87,7 @@ export default function CollateralPage() {
                   ))}
                 </div>
               </div>
-              <div className="border-t border-white/5 pt-4 flex items-center justify-between text-xs text-graphite font-mono">
+              <div className="border-t border-[#E8E5DD] pt-4 flex items-center justify-between text-xs text-graphite font-mono">
                 <span>generationuranium.com</span>
                 <span>info@generationuranium.com</span>
               </div>
@@ -101,7 +101,7 @@ export default function CollateralPage() {
         <section id="quarterly-update" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">02</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Quarterly Update
             </h2>
           </div>
@@ -115,7 +115,7 @@ export default function CollateralPage() {
                 <p className="mono-label">SHAREHOLDER UPDATE</p>
                 <p className="text-graphite font-mono text-xs">Q4 2024</p>
               </div>
-              <h3 className="font-display font-bold text-2xl text-white mb-4">
+              <h3 className="font-display font-bold text-2xl text-[#2D3748] mb-4">
                 Quarter in Review
               </h3>
               <div className="space-y-4 text-sm text-graphite leading-relaxed">
@@ -127,7 +127,7 @@ export default function CollateralPage() {
                   initial expectations.
                 </p>
               </div>
-              <div className="grid grid-cols-3 gap-4 mt-6 pt-4 border-t border-white/5">
+              <div className="grid grid-cols-3 gap-4 mt-6 pt-4 border-t border-[#E8E5DD]">
                 {[
                   { metric: "Drill Holes", value: "12", change: "+8 QoQ" },
                   { metric: "Meters Drilled", value: "2,400m", change: "+1,800m" },
@@ -150,7 +150,7 @@ export default function CollateralPage() {
         <section id="social-media" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">03</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Social Media
             </h2>
           </div>
@@ -161,13 +161,13 @@ export default function CollateralPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* LinkedIn */}
             <div>
-              <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">LINKEDIN — 1200x627</p>
+              <p className="font-mono text-[10px] text-[#A0AEC0] tracking-wider mb-3">LINKEDIN — 1200x627</p>
               <div className="aspect-[1200/627] bg-white rounded-xl overflow-hidden p-5 flex flex-col justify-between card-hover">
                 <p className="font-mono text-gen-green tracking-[0.2em] text-[10px]">
                   GENERATION URANIUM &middot; TSX-V: GEN
                 </p>
                 <div>
-                  <h4 className="font-display font-bold text-lg text-white leading-snug mb-2">
+                  <h4 className="font-display font-bold text-lg text-[#2D3748] leading-snug mb-2">
                     Drill Results Confirm High-Grade Uranium at Yath
                   </h4>
                   <div className="flex gap-2">
@@ -182,27 +182,27 @@ export default function CollateralPage() {
             </div>
             {/* Twitter */}
             <div>
-              <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">TWITTER/X — 1600x900</p>
+              <p className="font-mono text-[10px] text-[#A0AEC0] tracking-wider mb-3">TWITTER/X — 1600x900</p>
               <div className="aspect-[16/9] bg-white rounded-xl overflow-hidden p-5 flex flex-col justify-center items-center text-center relative card-hover">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,230,74,0.05)_0%,_transparent_60%)]" />
                 <p className="font-mono text-gen-green tracking-[0.3em] text-[10px] mb-2 relative z-10">TSX-V: GEN</p>
-                <h4 className="font-display font-bold text-2xl text-white leading-snug relative z-10">
+                <h4 className="font-display font-bold text-2xl text-[#2D3748] leading-snug relative z-10">
                   The Future<br />is Nuclear
                 </h4>
-                <p className="text-white/30 font-mono text-[10px] mt-2 relative z-10">generationuranium.com</p>
+                <p className="text-[#A0AEC0] font-mono text-[10px] mt-2 relative z-10">generationuranium.com</p>
               </div>
             </div>
             {/* Instagram */}
             <div>
-              <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">INSTAGRAM — 1080x1080</p>
+              <p className="font-mono text-[10px] text-[#A0AEC0] tracking-wider mb-3">INSTAGRAM — 1080x1080</p>
               <div className="aspect-square bg-white rounded-xl overflow-hidden p-5 flex flex-col justify-between card-hover">
                 <p className="font-mono text-gen-green tracking-[0.2em] text-[10px]">GENERATION URANIUM</p>
                 <div className="text-center">
                   <p className="stat-number text-5xl mb-1">$80</p>
-                  <p className="text-white/40 font-mono text-xs">/lb U&#x2083;O&#x2088; Spot Price</p>
+                  <p className="text-[#A0AEC0] font-mono text-xs">/lb U&#x2083;O&#x2088; Spot Price</p>
                   <p className="text-gen-green font-mono text-[10px] mt-2">&#x25B2; 220% since 2020</p>
                 </div>
-                <p className="text-white/20 font-mono text-[10px] text-center">TSX-V: GEN</p>
+                <p className="text-[#CBD5E0] font-mono text-[10px] text-center">TSX-V: GEN</p>
               </div>
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function CollateralPage() {
         <section id="email-letterhead" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">04</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Email &amp; Letterhead
             </h2>
           </div>
@@ -227,7 +227,7 @@ export default function CollateralPage() {
             <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
               <div className="bg-white px-6 py-4 flex items-center justify-between">
                 <p className="font-mono text-gen-green tracking-[0.15em] text-xs">GENERATION URANIUM</p>
-                <p className="text-white/30 font-mono text-xs">TSX-V: GEN</p>
+                <p className="text-[#A0AEC0] font-mono text-xs">TSX-V: GEN</p>
               </div>
               <div className="h-[2px] bg-gen-green glow-green-line" />
               <div className="p-6 space-y-3">
@@ -236,7 +236,7 @@ export default function CollateralPage() {
                 <p className="text-sm text-graphite leading-relaxed">
                   We are pleased to share the results of our Phase 1 drill program at the Yath Uranium Project...
                 </p>
-                <div className="pt-3 border-t border-white/5 text-xs text-graphite font-mono">
+                <div className="pt-3 border-t border-[#E8E5DD] text-xs text-graphite font-mono">
                   <p className="text-[#2D3748] font-display font-semibold">Generation Uranium Corp.</p>
                   <p>Suite 810 &#8211; 789 West Pender Street</p>
                   <p>Vancouver, BC V6C 1H2</p>
@@ -253,7 +253,7 @@ export default function CollateralPage() {
         <section id="conference-banners" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">05</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Conference Banners
             </h2>
           </div>
@@ -264,15 +264,15 @@ export default function CollateralPage() {
           <div className="space-y-8">
             {/* Wide Banner */}
             <div>
-              <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">WIDE BANNER — 2400x600</p>
+              <p className="font-mono text-[10px] text-[#A0AEC0] tracking-wider mb-3">WIDE BANNER — 2400x600</p>
               <div className="aspect-[4/1] bg-white rounded-2xl overflow-hidden flex items-center justify-between px-8 md:px-16 relative card-hover">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(200,230,74,0.06)_0%,_transparent_50%)]" />
                 <div className="relative z-10">
                   <p className="font-mono text-gen-green tracking-[0.3em] text-xs mb-1">TSX-V: GEN</p>
-                  <h3 className="font-display font-bold text-2xl md:text-4xl text-white">
+                  <h3 className="font-display font-bold text-2xl md:text-4xl text-[#2D3748]">
                     Generation Uranium
                   </h3>
-                  <p className="text-white/30 text-sm mt-1 font-mono">Clean Energy Exploration</p>
+                  <p className="text-[#A0AEC0] text-sm mt-1 font-mono">Clean Energy Exploration</p>
                 </div>
                 <div className="relative z-10 text-right hidden md:flex gap-8">
                   {[
@@ -282,7 +282,7 @@ export default function CollateralPage() {
                   ].map((stat) => (
                     <div key={stat.label}>
                       <p className="stat-number text-2xl">{stat.value}</p>
-                      <p className="text-white/30 font-mono text-[9px] tracking-wider uppercase">{stat.label}</p>
+                      <p className="text-[#A0AEC0] font-mono text-[9px] tracking-wider uppercase">{stat.label}</p>
                     </div>
                   ))}
                 </div>
@@ -297,7 +297,7 @@ export default function CollateralPage() {
         <section id="web-components" className="scroll-mt-24 mb-24">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="font-mono text-gen-green text-sm tracking-wider">06</span>
-            <h2 className="font-display font-bold text-white text-display-sm">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-sm">
               Web Components
             </h2>
           </div>
@@ -311,7 +311,7 @@ export default function CollateralPage() {
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(200,230,74,0.04)_0%,_transparent_50%)]" />
               <div className="relative z-10">
                 <p className="mono-label mb-2">INVEST IN CLEAN ENERGY</p>
-                <h3 className="font-display font-bold text-3xl text-white">
+                <h3 className="font-display font-bold text-3xl text-[#2D3748]">
                   The uranium supercycle is here.
                 </h3>
               </div>
@@ -319,7 +319,7 @@ export default function CollateralPage() {
                 <button className="bg-gen-green text-gen-dark font-display font-bold px-6 py-3 rounded-lg text-sm tracking-wide hover:shadow-[0_0_20px_rgba(200,230,74,0.3)] transition-all duration-300 whitespace-nowrap">
                   Learn More
                 </button>
-                <button className="border border-white/20 text-white font-display font-medium px-6 py-3 rounded-lg text-sm tracking-wide hover:border-gen-green hover:text-gen-green transition-all duration-300 whitespace-nowrap">
+                <button className="border border-[#E8E5DD] text-[#2D3748] font-display font-medium px-6 py-3 rounded-lg text-sm tracking-wide hover:border-gen-green hover:text-gen-green transition-all duration-300 whitespace-nowrap">
                   Contact IR
                 </button>
               </div>
@@ -334,7 +334,7 @@ export default function CollateralPage() {
               ].map((card) => (
                 <div key={card.title} className="bg-[#F5F3ED] rounded-xl p-6 card-hover group">
                   <div className={`w-10 h-1 bg-${card.color} rounded-full mb-5`} />
-                  <h4 className="font-display font-bold text-lg text-white mb-2 group-hover:text-gen-green transition-colors duration-300">
+                  <h4 className="font-display font-bold text-lg text-[#2D3748] mb-2 group-hover:text-gen-green transition-colors duration-300">
                     {card.title}
                   </h4>
                   <p className="text-sm text-graphite leading-relaxed">{card.desc}</p>

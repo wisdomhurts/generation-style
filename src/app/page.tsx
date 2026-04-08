@@ -66,7 +66,7 @@ export default function Home() {
 
           {/* Main headline */}
           <h1
-            className="font-display font-bold text-white text-display-xl max-w-5xl mb-6 animate-fade-up delay-100"
+            className="font-display font-bold text-[#2D3748] text-display-xl max-w-5xl mb-6 animate-fade-up delay-100"
           >
             Generating the Power of Tomorrow
           </h1>
@@ -97,7 +97,7 @@ export default function Home() {
                 <p className="stat-number text-2xl md:text-3xl mb-1">
                   {stat.value}
                 </p>
-                <p className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                <p className="font-mono text-[10px] tracking-[0.2em] text-[#A0AEC0] uppercase">
                   {stat.label}
                 </p>
               </div>
@@ -114,7 +114,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <p className="mono-label mb-4">BRAND SYSTEM</p>
-            <h2 className="font-display font-bold text-white text-display-md">
+            <h2 className="font-display font-bold text-[#2D3748] text-display-md">
               Six chapters of visual identity
             </h2>
           </div>
@@ -132,7 +132,7 @@ export default function Home() {
                 </p>
 
                 {/* Title */}
-                <h3 className="font-display font-bold text-white text-xl mb-2 group-hover:text-gen-green transition-colors duration-300">
+                <h3 className="font-display font-bold text-[#2D3748] text-xl mb-2 group-hover:text-gen-green transition-colors duration-300">
                   {s.title}
                 </h3>
 
@@ -169,7 +169,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-6 pt-4 border-t border-white/[0.03]">
-            <p className="text-white/20 text-xs">
+            <p className="text-[#CBD5E0] text-xs">
               &copy; {new Date().getFullYear()} Generation Uranium Corp. Brand Style System.
             </p>
           </div>

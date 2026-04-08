@@ -5,7 +5,7 @@ export default function DataTemplatesPage() {
         {/* Page Header */}
         <div className="mb-20">
           <p className="mono-label mb-4">DATA &amp; TEMPLATES</p>
-          <h1 className="font-display font-bold text-white text-display-lg mb-4">
+          <h1 className="font-display font-bold text-[#2D3748] text-display-lg mb-4">
             Data Visualization
           </h1>
           <p className="text-graphite text-lg max-w-2xl leading-relaxed">
@@ -38,7 +38,7 @@ export default function DataTemplatesPage() {
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">01</span>
-                  <h3 className="font-display font-bold text-white text-lg">Map Frame</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Map Frame</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Property boundary overlay with topo lines, callout markers, and legend panel.
@@ -59,14 +59,14 @@ export default function DataTemplatesPage() {
                       className="w-full bg-gen-green/80 rounded-t-sm hover:bg-gen-green transition-colors"
                       style={{ height: `${(v / 107) * 100}%` }}
                     />
-                    <span className="text-[9px] text-white/30 mt-2 font-mono">{2019 + i}</span>
+                    <span className="text-[9px] text-[#A0AEC0] mt-2 font-mono">{2019 + i}</span>
                   </div>
                 ))}
               </div>
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">02</span>
-                  <h3 className="font-display font-bold text-white text-lg">Data Slide</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Data Slide</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Bar chart with chartreuse accent showing uranium price trends over time.
@@ -82,12 +82,12 @@ export default function DataTemplatesPage() {
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">MILESTONES</p>
                 {/* Horizontal timeline */}
                 <div className="w-full relative mt-4">
-                  <div className="absolute top-1/2 left-[10%] right-[10%] h-px bg-white/10" />
+                  <div className="absolute top-1/2 left-[10%] right-[10%] h-px bg-[#F5F3ED]" />
                   <div className="flex justify-between px-[10%]">
                     {["2021", "2022", "2023", "2024", "2025"].map((y, i) => (
                       <div key={y} className="flex flex-col items-center relative">
                         <div className={`w-3 h-3 rounded-full border-2 ${i < 4 ? "bg-gen-green border-gen-green shadow-[0_0_6px_rgba(200,230,74,0.4)]" : "bg-transparent border-white/30"}`} />
-                        <span className={`text-[10px] mt-2 font-mono ${i < 4 ? "text-gen-green" : "text-white/30"}`}>{y}</span>
+                        <span className={`text-[10px] mt-2 font-mono ${i < 4 ? "text-gen-green" : "text-[#A0AEC0]"}`}>{y}</span>
                       </div>
                     ))}
                   </div>
@@ -96,7 +96,7 @@ export default function DataTemplatesPage() {
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">03</span>
-                  <h3 className="font-display font-bold text-white text-lg">Timeline</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Timeline</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Horizontal milestone dots marking corporate milestones from incorporation to PEA.
@@ -112,21 +112,21 @@ export default function DataTemplatesPage() {
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">PEER COMPARISON</p>
                 {/* Mini table */}
                 <div className="mt-10 space-y-1.5 text-[10px] font-mono">
-                  <div className="flex justify-between text-white/30 border-b border-white/5 pb-1">
+                  <div className="flex justify-between text-[#A0AEC0] border-b border-[#E8E5DD] pb-1">
                     <span>COMPANY</span><span>STAGE</span>
                   </div>
-                  <div className="flex justify-between text-white/40"><span>Cameco Corp.</span><span>Producer</span></div>
-                  <div className="flex justify-between text-white/40"><span>NexGen Energy</span><span>Development</span></div>
+                  <div className="flex justify-between text-[#A0AEC0]"><span>Cameco Corp.</span><span>Producer</span></div>
+                  <div className="flex justify-between text-[#A0AEC0]"><span>NexGen Energy</span><span>Development</span></div>
                   <div className="flex justify-between bg-gen-green/10 text-gen-green px-2 py-1 rounded -mx-2">
                     <span className="font-bold">Generation Uranium</span><span>Exploration</span>
                   </div>
-                  <div className="flex justify-between text-white/40"><span>Cosa Resources</span><span>Exploration</span></div>
+                  <div className="flex justify-between text-[#A0AEC0]"><span>Cosa Resources</span><span>Exploration</span></div>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">04</span>
-                  <h3 className="font-display font-bold text-white text-lg">Peer Comparison</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Peer Comparison</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Competitive positioning table with GEN highlighted among uranium sector peers.
@@ -147,8 +147,8 @@ export default function DataTemplatesPage() {
                     { id: "YTH-004", w: "5.5m", g: "0.15%" },
                   ].map((r) => (
                     <div key={r.id} className="glass-dark rounded-lg px-4 py-2.5 flex items-center justify-between">
-                      <span className="font-mono text-white/60 text-[11px]">{r.id}</span>
-                      <span className="font-mono text-white/40 text-[10px]">{r.w}</span>
+                      <span className="font-mono text-[#6B7B8D] text-[11px]">{r.id}</span>
+                      <span className="font-mono text-[#A0AEC0] text-[10px]">{r.w}</span>
                       <span className="stat-number text-sm">{r.g}</span>
                     </div>
                   ))}
@@ -157,7 +157,7 @@ export default function DataTemplatesPage() {
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">05</span>
-                  <h3 className="font-display font-bold text-white text-lg">Drill Results</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Drill Results</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Technical assay intercept cards formatted for investor presentation clarity.
@@ -184,7 +184,7 @@ export default function DataTemplatesPage() {
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">06</span>
-                  <h3 className="font-display font-bold text-white text-lg">Cross-Section</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Cross-Section</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Geological cross-section with layered strata and mineralization zone highlights.
@@ -198,17 +198,17 @@ export default function DataTemplatesPage() {
             <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
               <div className="h-[220px] relative bg-white p-6 flex items-center justify-center overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">CORE PHOTO</p>
-                <div className="w-[200px] h-[120px] border border-white/10 rounded-lg flex items-center justify-center bg-[#F5F3ED]">
+                <div className="w-[200px] h-[120px] border border-[#E8E5DD] rounded-lg flex items-center justify-center bg-[#F5F3ED]">
                   <div className="text-center">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A5568" strokeWidth="1.5" className="mx-auto mb-2">
                       <rect x="3" y="3" width="18" height="18" rx="2" />
                       <circle cx="8.5" cy="8.5" r="1.5" />
                       <path d="M21 15l-5-5L5 21" />
                     </svg>
-                    <p className="font-mono text-[9px] text-white/30 tracking-wider">CORE SAMPLE</p>
+                    <p className="font-mono text-[9px] text-[#A0AEC0] tracking-wider">CORE SAMPLE</p>
                   </div>
                 </div>
-                <div className="absolute bottom-6 left-6 right-6 flex justify-between font-mono text-[9px] text-white/20">
+                <div className="absolute bottom-6 left-6 right-6 flex justify-between font-mono text-[9px] text-[#CBD5E0]">
                   <span>HOLE: YTH-003</span>
                   <span>DEPTH: 115.5m</span>
                   <span>U3O8: 0.21%</span>
@@ -217,7 +217,7 @@ export default function DataTemplatesPage() {
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">07</span>
-                  <h3 className="font-display font-bold text-white text-lg">Core Photo</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Core Photo</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Photo frame template with overlaid hole ID, depth, and assay metadata.
@@ -243,7 +243,7 @@ export default function DataTemplatesPage() {
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">08</span>
-                  <h3 className="font-display font-bold text-white text-lg">Property Map</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Property Map</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Claim block shapes with boundary overlays, pins, and area calculations.
@@ -282,7 +282,7 @@ export default function DataTemplatesPage() {
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">09</span>
-                  <h3 className="font-display font-bold text-white text-lg">Callout Library</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Callout Library</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Map callout specimens with color-coded pins and glass-dark label tooltips.
@@ -305,10 +305,10 @@ export default function DataTemplatesPage() {
                   ].map((b) => (
                     <div key={b.label}>
                       <div className="flex justify-between mb-1">
-                        <span className="font-mono text-[9px] text-white/40 tracking-wider">{b.label}</span>
+                        <span className="font-mono text-[9px] text-[#A0AEC0] tracking-wider">{b.label}</span>
                         <span className="font-mono text-[9px] text-gen-green">{b.pct}%</span>
                       </div>
-                      <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                      <div className="h-1.5 bg-[#F5F3ED] rounded-full overflow-hidden">
                         <div className="h-full bg-gen-green rounded-full" style={{ width: `${b.pct}%` }} />
                       </div>
                     </div>
@@ -316,14 +316,14 @@ export default function DataTemplatesPage() {
                   {/* Mini donut */}
                   <div className="flex items-center gap-4 mt-2">
                     <svg width="48" height="48" viewBox="0 0 48 48">
-                      <circle cx="24" cy="24" r="18" fill="none" stroke="#F5F3ED" strokeWidth="4" />
+                      <circle cx="24" cy="24" r="18" fill="none" stroke="#2D3748" strokeWidth="4" />
                       <circle cx="24" cy="24" r="18" fill="none" stroke="#7CC842" strokeWidth="4"
                         strokeDasharray="113.1" strokeDashoffset="28.3" strokeLinecap="round"
                         transform="rotate(-90 24 24)" />
                     </svg>
                     <div>
                       <p className="stat-number text-lg">75%</p>
-                      <p className="font-mono text-[9px] text-white/30 tracking-wider">PHASE COMPLETE</p>
+                      <p className="font-mono text-[9px] text-[#A0AEC0] tracking-wider">PHASE COMPLETE</p>
                     </div>
                   </div>
                 </div>
@@ -331,7 +331,7 @@ export default function DataTemplatesPage() {
               <div className="p-6">
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="font-mono text-gen-green text-sm">10</span>
-                  <h3 className="font-display font-bold text-white text-lg">Infographics</h3>
+                  <h3 className="font-display font-bold text-[#2D3748] text-lg">Infographics</h3>
                 </div>
                 <p className="text-graphite text-sm leading-relaxed">
                   Progress bars, donut charts, and percentage indicators for project milestones.
