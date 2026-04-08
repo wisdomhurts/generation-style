@@ -1,24 +1,24 @@
 const coreTokens = [
   {
     name: "Deep Charcoal",
-    hex: "#1E2A2A",
+    hex: "#FFFFFF",
     rgb: "30, 42, 42",
     usage: "Primary dark backgrounds, hero sections, navigation bars",
-    tints: ["#1E2A2A", "#2D3A3A", "#3D4A4A", "#4D5A5A", "#5D6A6A"],
+    tints: ["#FFFFFF", "#F5F3ED", "#3D4A4A", "#4D5A5A", "#5D6A6A"],
   },
   {
     name: "Chartreuse",
-    hex: "#C8E64A",
+    hex: "#7CC842",
     rgb: "200, 230, 74",
     usage: "Primary accent — overlines, CTAs, highlights, glow effects, energy",
-    tints: ["#C8E64A", "#D3EB6E", "#DEF092", "#E9F5B6", "#F4FADA"],
+    tints: ["#7CC842", "#D3EB6E", "#DEF092", "#E9F5B6", "#F4FADA"],
   },
   {
     name: "Carbon",
-    hex: "#2D3A3A",
+    hex: "#F5F3ED",
     rgb: "45, 58, 58",
     usage: "Card backgrounds, secondary panels, elevated surfaces",
-    tints: ["#2D3A3A", "#3D4A4A", "#4D5A5A", "#5D6A6A", "#6D7A7A"],
+    tints: ["#F5F3ED", "#3D4A4A", "#4D5A5A", "#5D6A6A", "#6D7A7A"],
   },
   {
     name: "Warm Sand",
@@ -73,11 +73,11 @@ export default function FoundationPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coreTokens.map((token) => {
-              const isLight = ["#F5F3ED", "#C8E64A"].includes(token.hex);
+              const isLight = ["#F5F3ED", "#7CC842"].includes(token.hex);
               return (
                 <div
                   key={token.name}
-                  className="rounded-2xl overflow-hidden card-hover bg-carbon group"
+                  className="rounded-2xl overflow-hidden card-hover bg-[#F5F3ED] group"
                 >
                   {/* Color swatch */}
                   <div
@@ -127,7 +127,7 @@ export default function FoundationPage() {
             {extendedTokens.map((token) => {
               const isLight = ["#F8FAFC", "#EAB308", "#93C5FD"].includes(token.hex);
               return (
-                <div key={token.name} className="rounded-xl overflow-hidden card-hover bg-carbon group">
+                <div key={token.name} className="rounded-xl overflow-hidden card-hover bg-[#F5F3ED] group">
                   <div
                     className="h-28 flex items-end p-4"
                     style={{ backgroundColor: token.hex }}
@@ -164,25 +164,25 @@ export default function FoundationPage() {
           <div className="mb-16">
             <p className="mono-label mb-8">DISPLAY — OUTFIT</p>
             <div className="space-y-8 border-l-2 border-gen-green/30 pl-8">
-              <div className="bg-carbon rounded-xl p-8">
+              <div className="bg-[#F5F3ED] rounded-xl p-8">
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">72px / HERO</p>
                 <p className="font-display font-bold text-[72px] leading-[1.05] text-white tracking-tight">
                   Power
                 </p>
               </div>
-              <div className="bg-gen-dark rounded-xl p-8 border border-white/5">
+              <div className="bg-white rounded-xl p-8 border border-white/5">
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">48px / SECTION TITLE</p>
                 <p className="font-display font-bold text-[48px] leading-tight text-white">
                   Generating Tomorrow
                 </p>
               </div>
-              <div className="bg-carbon rounded-xl p-8">
+              <div className="bg-[#F5F3ED] rounded-xl p-8">
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">32px / SUBSECTION</p>
                 <p className="font-display font-semibold text-[32px] leading-snug text-white">
                   Strategic Uranium Exploration in the Thelon Basin
                 </p>
               </div>
-              <div className="bg-gen-dark rounded-xl p-8 border border-white/5">
+              <div className="bg-white rounded-xl p-8 border border-white/5">
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">24px / CARD TITLE</p>
                 <p className="font-display font-semibold text-[24px] leading-snug text-white">
                   Next-Generation Clean Energy Exploration
@@ -195,7 +195,7 @@ export default function FoundationPage() {
           <div className="mb-16">
             <p className="mono-label mb-8">MONO LABELS — MANROPE</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-carbon rounded-xl p-8">
+              <div className="bg-[#F5F3ED] rounded-xl p-8">
                 <p className="font-mono text-gen-green text-xs tracking-[0.25em] mb-3">OVERLINE LABEL</p>
                 <p className="font-mono text-gen-green text-lg tracking-wider">
                   TSX-V: GEN
@@ -222,7 +222,7 @@ export default function FoundationPage() {
             <div className="space-y-6 border-l-2 border-white/10 pl-8">
               <div>
                 <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-2">16px / BODY REGULAR</p>
-                <p className="text-[16px] leading-relaxed text-warm-sand">
+                <p className="text-[16px] leading-relaxed text-[#2D3748]">
                   Generation Uranium Corp. is a Canadian mineral exploration
                   company focused on acquiring and advancing high-potential
                   uranium properties in world-class jurisdictions.
@@ -255,11 +255,11 @@ export default function FoundationPage() {
                 { weight: "Medium 500", cls: "font-medium" },
                 { weight: "Semibold 600", cls: "font-semibold" },
               ].map((w) => (
-                <div key={w.weight} className="bg-carbon rounded-xl p-6 card-hover">
+                <div key={w.weight} className="bg-[#F5F3ED] rounded-xl p-6 card-hover">
                   <p className="font-mono text-[10px] text-gen-green/60 tracking-wider mb-3">
                     Inter {w.weight}
                   </p>
-                  <p className={`text-lg text-warm-sand ${w.cls}`}>
+                  <p className={`text-lg text-[#2D3748] ${w.cls}`}>
                     Clean energy exploration across Canada&rsquo;s premier uranium districts.
                   </p>
                 </div>
@@ -274,7 +274,7 @@ export default function FoundationPage() {
               <button className="bg-gen-green text-gen-dark font-display font-bold px-7 py-3 rounded-lg text-sm tracking-wide hover:shadow-[0_0_20px_rgba(200,230,74,0.3)] hover:brightness-110 transition-all duration-300">
                 Primary Action
               </button>
-              <button className="bg-carbon text-white font-display font-semibold px-7 py-3 rounded-lg text-sm tracking-wide border border-white/10 hover:border-gen-green/30 transition-all duration-300">
+              <button className="bg-[#F5F3ED] text-white font-display font-semibold px-7 py-3 rounded-lg text-sm tracking-wide border border-white/10 hover:border-gen-green/30 transition-all duration-300">
                 Secondary Action
               </button>
               <button className="border-2 border-gen-green text-gen-green font-display font-semibold px-7 py-3 rounded-lg text-sm tracking-wide hover:bg-gen-green/10 hover:shadow-[0_0_20px_rgba(200,230,74,0.15)] transition-all duration-300">

@@ -32,14 +32,14 @@ export default function SiteNav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-black/70 backdrop-blur-2xl border-b border-white/5 shadow-2xl"
+          ? "bg-white/95 backdrop-blur-2xl border-b border-white/5 shadow-2xl"
           : "bg-black/40 backdrop-blur-xl border-b border-white/[0.03]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1.5 group">
-          <span className="font-display font-bold text-sm tracking-[0.2em] text-white transition-colors duration-300 group-hover:text-white">
+          <span className="font-display font-bold text-sm tracking-[0.2em] text-[#2D3748] transition-colors duration-300 group-hover:text-[#2D3748]">
             GENERATION
           </span>
           <span className="font-display font-bold text-sm tracking-[0.2em] text-gen-green transition-all duration-300 group-hover:drop-shadow-[0_0_8px_rgba(200,230,74,0.4)]">
@@ -58,7 +58,7 @@ export default function SiteNav() {
                 className={`relative text-sm px-4 py-2 font-medium tracking-wide transition-all duration-300 link-underline ${
                   isActive
                     ? "text-gen-green"
-                    : "text-white/70 hover:text-white"
+                    : "text-[#2D3748]/70 hover:text-[#2D3748]"
                 }`}
               >
                 {isActive && (
@@ -82,7 +82,7 @@ export default function SiteNav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white/70 hover:text-gen-green transition-colors"
+          className="md:hidden text-[#2D3748]/70 hover:text-gen-green transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -106,7 +106,7 @@ export default function SiteNav() {
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
                 className={`block py-2.5 text-sm font-medium tracking-wide transition-colors ${
-                  isActive ? "text-gen-green" : "text-white/70 hover:text-white"
+                  isActive ? "text-gen-green" : "text-[#2D3748]/70 hover:text-[#2D3748]"
                 }`}
               >
                 {isActive && (

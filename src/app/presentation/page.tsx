@@ -26,7 +26,7 @@ export default function PresentationPage() {
             Opening slide — dark background, bold headline, chartreuse accent statistics strip.
           </p>
 
-          <div className="aspect-video bg-gen-dark rounded-2xl overflow-hidden relative flex flex-col justify-between p-8 md:p-12 card-hover">
+          <div className="aspect-video bg-white rounded-2xl overflow-hidden relative flex flex-col justify-between p-8 md:p-12 card-hover">
             {/* Radial glow */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,230,74,0.06)_0%,_transparent_60%)]" />
 
@@ -125,7 +125,7 @@ export default function PresentationPage() {
             Dark centered title — used to transition between deck sections.
           </p>
 
-          <div className="aspect-video bg-gen-dark rounded-2xl overflow-hidden flex items-center justify-center relative card-hover">
+          <div className="aspect-video bg-white rounded-2xl overflow-hidden flex items-center justify-center relative card-hover">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,230,74,0.06)_0%,_transparent_60%)]" />
             <div className="text-center relative z-10">
               <div className="w-12 h-0.5 bg-gen-green mx-auto mb-6 glow-green-line" />
@@ -154,7 +154,7 @@ export default function PresentationPage() {
             Big Number, Data Card, and Status Badge — reusable in any slide context.
           </p>
 
-          <div className="aspect-video bg-carbon rounded-2xl overflow-hidden p-8 md:p-12 flex flex-col justify-between card-hover border border-white/5">
+          <div className="aspect-video bg-[#F5F3ED] rounded-2xl overflow-hidden p-8 md:p-12 flex flex-col justify-between card-hover border border-white/5">
             <p className="font-mono text-gen-green tracking-[0.25em] text-xs">
               COMPONENT SPECIMENS
             </p>
@@ -168,7 +168,7 @@ export default function PresentationPage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-gen-dark rounded-xl p-4 md:p-6 border border-white/5 hover:border-gen-green/20 transition-all duration-300"
+                  className="bg-white rounded-xl p-4 md:p-6 border border-white/5 hover:border-gen-green/20 transition-all duration-300"
                 >
                   <div className="flex items-baseline gap-1">
                     <span className="stat-number text-3xl md:text-4xl">
@@ -246,7 +246,7 @@ export default function PresentationPage() {
               </div>
             </div>
             {/* Right: Content */}
-            <div className="bg-carbon p-6 md:p-10 flex flex-col justify-center">
+            <div className="bg-[#F5F3ED] p-6 md:p-10 flex flex-col justify-center">
               <p className="font-mono text-gen-green tracking-[0.25em] text-[10px] md:text-xs mb-4">
                 YATH URANIUM PROJECT
               </p>

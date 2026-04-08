@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex flex-col justify-between bg-gen-dark overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-between bg-white overflow-hidden">
         {/* Radial glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,230,74,0.06)_0%,_transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(200,230,74,0.04)_0%,_transparent_50%)]" />
@@ -124,7 +124,7 @@ export default function Home() {
               <Link
                 key={s.num}
                 href={s.href}
-                className="group bg-carbon rounded-2xl p-7 card-hover relative overflow-hidden"
+                className="group bg-[#F5F3ED] rounded-2xl p-7 card-hover relative overflow-hidden"
               >
                 {/* Number */}
                 <p className="font-mono text-gen-green text-sm mb-4 tracking-wider">
@@ -158,7 +158,7 @@ export default function Home() {
       <div className="section-divider mx-6" />
 
       {/* ─── FOOTER ─── */}
-      <footer className="bg-gen-dark border-t border-white/[0.05] py-12 px-6">
+      <footer className="bg-white border-t border-white/[0.05] py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <p className="font-mono text-gen-green text-sm tracking-[0.15em]">

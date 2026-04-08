@@ -26,9 +26,9 @@ export default function CollateralPage() {
             Single-page fact sheet with dark header, key statistics, and company overview.
           </p>
 
-          <div className="bg-carbon rounded-2xl overflow-hidden card-hover max-w-2xl mx-auto">
+          <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover max-w-2xl mx-auto">
             {/* Dark Header */}
-            <div className="bg-gen-dark p-6 md:p-8 border-b border-white/5">
+            <div className="bg-white p-6 md:p-8 border-b border-white/5">
               <div className="flex items-center justify-between mb-6">
                 <p className="font-mono text-gen-green tracking-[0.2em] text-xs">
                   GENERATION URANIUM
@@ -71,7 +71,7 @@ export default function CollateralPage() {
                     { name: "Yath Project", loc: "Yukon Territory", size: "7,600 ha", status: "Active" },
                     { name: "Lac Savane", loc: "Quebec", size: "12,400 ha", status: "Permitting" },
                   ].map((p) => (
-                    <div key={p.name} className="flex items-center justify-between bg-gen-dark rounded-lg p-3 border border-white/5">
+                    <div key={p.name} className="flex items-center justify-between bg-white rounded-lg p-3 border border-white/5">
                       <div>
                         <p className="text-sm font-display font-semibold text-white">{p.name}</p>
                         <p className="text-xs text-graphite font-mono">{p.loc} &middot; {p.size}</p>
@@ -109,7 +109,7 @@ export default function CollateralPage() {
             Shareholder letter template with progress metrics and milestones.
           </p>
 
-          <div className="bg-carbon rounded-2xl overflow-hidden card-hover max-w-2xl mx-auto">
+          <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover max-w-2xl mx-auto">
             <div className="border-l-2 border-gen-green p-6 md:p-8">
               <div className="flex items-center justify-between mb-4">
                 <p className="mono-label">SHAREHOLDER UPDATE</p>
@@ -162,7 +162,7 @@ export default function CollateralPage() {
             {/* LinkedIn */}
             <div>
               <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">LINKEDIN — 1200x627</p>
-              <div className="aspect-[1200/627] bg-gen-dark rounded-xl overflow-hidden p-5 flex flex-col justify-between card-hover">
+              <div className="aspect-[1200/627] bg-white rounded-xl overflow-hidden p-5 flex flex-col justify-between card-hover">
                 <p className="font-mono text-gen-green tracking-[0.2em] text-[10px]">
                   GENERATION URANIUM &middot; TSX-V: GEN
                 </p>
@@ -183,7 +183,7 @@ export default function CollateralPage() {
             {/* Twitter */}
             <div>
               <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">TWITTER/X — 1600x900</p>
-              <div className="aspect-[16/9] bg-gen-dark rounded-xl overflow-hidden p-5 flex flex-col justify-center items-center text-center relative card-hover">
+              <div className="aspect-[16/9] bg-white rounded-xl overflow-hidden p-5 flex flex-col justify-center items-center text-center relative card-hover">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,230,74,0.05)_0%,_transparent_60%)]" />
                 <p className="font-mono text-gen-green tracking-[0.3em] text-[10px] mb-2 relative z-10">TSX-V: GEN</p>
                 <h4 className="font-display font-bold text-2xl text-white leading-snug relative z-10">
@@ -195,7 +195,7 @@ export default function CollateralPage() {
             {/* Instagram */}
             <div>
               <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">INSTAGRAM — 1080x1080</p>
-              <div className="aspect-square bg-gen-dark rounded-xl overflow-hidden p-5 flex flex-col justify-between card-hover">
+              <div className="aspect-square bg-white rounded-xl overflow-hidden p-5 flex flex-col justify-between card-hover">
                 <p className="font-mono text-gen-green tracking-[0.2em] text-[10px]">GENERATION URANIUM</p>
                 <div className="text-center">
                   <p className="stat-number text-5xl mb-1">$80</p>
@@ -224,20 +224,20 @@ export default function CollateralPage() {
 
           <div className="max-w-2xl mx-auto space-y-6">
             {/* Email */}
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="bg-gen-dark px-6 py-4 flex items-center justify-between">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="bg-white px-6 py-4 flex items-center justify-between">
                 <p className="font-mono text-gen-green tracking-[0.15em] text-xs">GENERATION URANIUM</p>
                 <p className="text-white/30 font-mono text-xs">TSX-V: GEN</p>
               </div>
               <div className="h-[2px] bg-gen-green glow-green-line" />
               <div className="p-6 space-y-3">
                 <p className="text-sm text-graphite font-mono">Subject: Q4 2024 Exploration Update</p>
-                <p className="text-sm text-warm-sand">Dear Investor,</p>
+                <p className="text-sm text-[#2D3748]">Dear Investor,</p>
                 <p className="text-sm text-graphite leading-relaxed">
                   We are pleased to share the results of our Phase 1 drill program at the Yath Uranium Project...
                 </p>
                 <div className="pt-3 border-t border-white/5 text-xs text-graphite font-mono">
-                  <p className="text-warm-sand font-display font-semibold">Generation Uranium Corp.</p>
+                  <p className="text-[#2D3748] font-display font-semibold">Generation Uranium Corp.</p>
                   <p>Suite 810 &#8211; 789 West Pender Street</p>
                   <p>Vancouver, BC V6C 1H2</p>
                   <p className="text-gen-green mt-1">generationuranium.com</p>
@@ -265,7 +265,7 @@ export default function CollateralPage() {
             {/* Wide Banner */}
             <div>
               <p className="font-mono text-[10px] text-white/30 tracking-wider mb-3">WIDE BANNER — 2400x600</p>
-              <div className="aspect-[4/1] bg-gen-dark rounded-2xl overflow-hidden flex items-center justify-between px-8 md:px-16 relative card-hover">
+              <div className="aspect-[4/1] bg-white rounded-2xl overflow-hidden flex items-center justify-between px-8 md:px-16 relative card-hover">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(200,230,74,0.06)_0%,_transparent_50%)]" />
                 <div className="relative z-10">
                   <p className="font-mono text-gen-green tracking-[0.3em] text-xs mb-1">TSX-V: GEN</p>
@@ -307,7 +307,7 @@ export default function CollateralPage() {
 
           <div className="space-y-8">
             {/* CTA Banner */}
-            <div className="bg-gen-dark rounded-2xl overflow-hidden p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 card-hover relative">
+            <div className="bg-white rounded-2xl overflow-hidden p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 card-hover relative">
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(200,230,74,0.04)_0%,_transparent_50%)]" />
               <div className="relative z-10">
                 <p className="mono-label mb-2">INVEST IN CLEAN ENERGY</p>
@@ -332,7 +332,7 @@ export default function CollateralPage() {
                 { title: "Proven Team", desc: "Management with decades of combined exploration and capital markets experience.", color: "reactor-blue" },
                 { title: "Market Timing", desc: "Positioned at the inflection point of the uranium supercycle.", color: "uranium-yellow" },
               ].map((card) => (
-                <div key={card.title} className="bg-carbon rounded-xl p-6 card-hover group">
+                <div key={card.title} className="bg-[#F5F3ED] rounded-xl p-6 card-hover group">
                   <div className={`w-10 h-1 bg-${card.color} rounded-full mb-5`} />
                   <h4 className="font-display font-bold text-lg text-white mb-2 group-hover:text-gen-green transition-colors duration-300">
                     {card.title}

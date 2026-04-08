@@ -19,15 +19,15 @@ export default function DataTemplatesPage() {
 
           {/* ─── 01 MAP FRAME ─── */}
           <section id="map-frame" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
               {/* Preview area */}
-              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+              <div className="h-[220px] relative bg-white p-6 overflow-hidden">
                 {/* Topo lines */}
                 <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 400 220" fill="none">
-                  <path d="M0,100 Q100,60 200,90 T400,80" stroke="#C8E64A" strokeWidth="1" fill="none"/>
-                  <path d="M0,130 Q100,90 200,120 T400,110" stroke="#C8E64A" strokeWidth="0.8" fill="none"/>
-                  <path d="M0,160 Q100,120 200,150 T400,140" stroke="#C8E64A" strokeWidth="0.6" fill="none"/>
-                  <path d="M0,70 Q100,30 200,60 T400,50" stroke="#C8E64A" strokeWidth="0.5" fill="none"/>
+                  <path d="M0,100 Q100,60 200,90 T400,80" stroke="#7CC842" strokeWidth="1" fill="none"/>
+                  <path d="M0,130 Q100,90 200,120 T400,110" stroke="#7CC842" strokeWidth="0.8" fill="none"/>
+                  <path d="M0,160 Q100,120 200,150 T400,140" stroke="#7CC842" strokeWidth="0.6" fill="none"/>
+                  <path d="M0,70 Q100,30 200,60 T400,50" stroke="#7CC842" strokeWidth="0.5" fill="none"/>
                 </svg>
                 {/* Callout dots */}
                 <div className="absolute top-[30%] left-[25%] w-3 h-3 bg-gen-green rounded-full shadow-[0_0_8px_rgba(200,230,74,0.5)]" />
@@ -49,8 +49,8 @@ export default function DataTemplatesPage() {
 
           {/* ─── 02 DATA SLIDE ─── */}
           <section id="data-slide" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 flex items-end gap-3 overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 flex items-end gap-3 overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">MARKET DATA</p>
                 {/* Bar chart */}
                 {[25, 30, 42, 50, 73, 107].map((v, i) => (
@@ -77,8 +77,8 @@ export default function DataTemplatesPage() {
 
           {/* ─── 03 TIMELINE ─── */}
           <section id="timeline" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 flex items-center overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 flex items-center overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">MILESTONES</p>
                 {/* Horizontal timeline */}
                 <div className="w-full relative mt-4">
@@ -107,8 +107,8 @@ export default function DataTemplatesPage() {
 
           {/* ─── 04 PEER COMPARISON ─── */}
           <section id="peer-comparison" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">PEER COMPARISON</p>
                 {/* Mini table */}
                 <div className="mt-10 space-y-1.5 text-[10px] font-mono">
@@ -137,8 +137,8 @@ export default function DataTemplatesPage() {
 
           {/* ─── 05 DRILL RESULTS ─── */}
           <section id="drill-results" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">DRILL INTERCEPTS</p>
                 <div className="mt-10 space-y-2">
                   {[
@@ -168,17 +168,17 @@ export default function DataTemplatesPage() {
 
           {/* ─── 06 CROSS SECTION ─── */}
           <section id="cross-section" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">CROSS SECTION</p>
                 {/* Layered strata */}
                 <svg className="absolute bottom-0 left-0 w-full h-[140px]" viewBox="0 0 400 140" fill="none" preserveAspectRatio="none">
                   <path d="M0,30 Q100,10 200,25 T400,20 L400,50 Q300,40 200,55 T0,60 Z" fill="#3D6B4F" opacity="0.3"/>
                   <path d="M0,60 Q100,40 200,55 T400,50 L400,80 Q300,70 200,85 T0,90 Z" fill="#4A5568" opacity="0.4"/>
-                  <path d="M0,90 Q100,70 200,85 T400,80 L400,110 Q300,100 200,115 T0,120 Z" fill="#2D3A3A" opacity="0.6"/>
-                  <path d="M0,120 Q100,100 200,115 T400,110 L400,140 L0,140 Z" fill="#1E2A2A" opacity="0.8"/>
+                  <path d="M0,90 Q100,70 200,85 T400,80 L400,110 Q300,100 200,115 T0,120 Z" fill="#F5F3ED" opacity="0.6"/>
+                  <path d="M0,120 Q100,100 200,115 T400,110 L400,140 L0,140 Z" fill="#FFFFFF" opacity="0.8"/>
                   {/* Mineralization zone */}
-                  <rect x="150" y="55" width="80" height="20" rx="4" fill="#C8E64A" fillOpacity="0.2" stroke="#C8E64A" strokeWidth="1" strokeOpacity="0.4"/>
+                  <rect x="150" y="55" width="80" height="20" rx="4" fill="#7CC842" fillOpacity="0.2" stroke="#7CC842" strokeWidth="1" strokeOpacity="0.4"/>
                 </svg>
               </div>
               <div className="p-6">
@@ -195,10 +195,10 @@ export default function DataTemplatesPage() {
 
           {/* ─── 07 CORE PHOTO ─── */}
           <section id="core-photo" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 flex items-center justify-center overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 flex items-center justify-center overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">CORE PHOTO</p>
-                <div className="w-[200px] h-[120px] border border-white/10 rounded-lg flex items-center justify-center bg-carbon">
+                <div className="w-[200px] h-[120px] border border-white/10 rounded-lg flex items-center justify-center bg-[#F5F3ED]">
                   <div className="text-center">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A5568" strokeWidth="1.5" className="mx-auto mb-2">
                       <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -228,8 +228,8 @@ export default function DataTemplatesPage() {
 
           {/* ─── 08 PROPERTY MAP ─── */}
           <section id="property-map" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">PROPERTY MAP</p>
                 {/* Claim block shapes */}
                 <div className="absolute inset-10 mt-8">
@@ -254,8 +254,8 @@ export default function DataTemplatesPage() {
 
           {/* ─── 09 CALLOUT LIBRARY ─── */}
           <section id="callout-library" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">CALLOUT LIBRARY</p>
                 <div className="mt-10 space-y-3">
                   {/* Callout specimens */}
@@ -293,8 +293,8 @@ export default function DataTemplatesPage() {
 
           {/* ─── 10 INFOGRAPHICS ─── */}
           <section id="infographics" className="scroll-mt-24">
-            <div className="bg-carbon rounded-2xl overflow-hidden card-hover">
-              <div className="h-[220px] relative bg-gen-dark p-6 overflow-hidden">
+            <div className="bg-[#F5F3ED] rounded-2xl overflow-hidden card-hover">
+              <div className="h-[220px] relative bg-white p-6 overflow-hidden">
                 <p className="absolute top-6 left-6 font-mono text-gen-green text-[10px] tracking-[0.2em]">INFOGRAPHICS</p>
                 <div className="mt-12 space-y-4">
                   {/* Progress bars */}
@@ -316,8 +316,8 @@ export default function DataTemplatesPage() {
                   {/* Mini donut */}
                   <div className="flex items-center gap-4 mt-2">
                     <svg width="48" height="48" viewBox="0 0 48 48">
-                      <circle cx="24" cy="24" r="18" fill="none" stroke="#2D3A3A" strokeWidth="4" />
-                      <circle cx="24" cy="24" r="18" fill="none" stroke="#C8E64A" strokeWidth="4"
+                      <circle cx="24" cy="24" r="18" fill="none" stroke="#F5F3ED" strokeWidth="4" />
+                      <circle cx="24" cy="24" r="18" fill="none" stroke="#7CC842" strokeWidth="4"
                         strokeDasharray="113.1" strokeDashoffset="28.3" strokeLinecap="round"
                         transform="rotate(-90 24 24)" />
                     </svg>

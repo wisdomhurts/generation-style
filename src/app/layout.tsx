@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${inter.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="noise-overlay min-h-full flex flex-col bg-gen-dark text-warm-sand">
+      <body className=" min-h-full flex flex-col bg-white text-[#2D3748]">
         <SiteNav />
         <main className="flex-1 pt-16">{children}</main>
       </body>
